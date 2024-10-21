@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #353030 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background-image: url(./imgs/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #726C6C;
+    border-radius: 0 0 25px 25px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 270px;
+    height: 100%;
+    margin-left: 50px;
+    color: #fdb600;
+    font-size: 10px;
+}
+
+.header-logo img {
+    width: 40px;
+    height: 30px;
+    margin-right: 20px ;
+    border-radius: 10px;
+}
+
+.header-login {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+.header-login img {
+    width: 50px;
+}
+
+.header-login a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fdb600;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+main {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 200px 0;
+}
+
+main img {
+    width: 600px;
+}
+
+.produtos {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px;
+}
+
+.cards {
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 20px;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 0 0 25px 5px #42fd00 ;
+}
+
+hr {
+    width: 70%;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #42fd00;
+    position: relative;
+    border-color: #42fd00;
+    margin: 50px;
+}
+
+footer{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 50px;
+    font-weight: bold;
+}   
+
+footer .caixa-conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .caixa-conteudo img {
+    width: 400px;
+}
+
+footer .caixa-conteudo .caixa-texto {
+    width: 300px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
