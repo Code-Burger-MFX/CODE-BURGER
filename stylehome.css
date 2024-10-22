@@ -41,6 +41,16 @@ header {
     font-size: 10px;
 }
 
+.direcao-index {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.direcao-index a {
+    text-decoration: none;
+}
+
 .header-logo img {
     width: 40px;
     height: 30px;
@@ -61,12 +71,12 @@ header {
     width: 50px;
 }
 
-.header-login a {
+header a{
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #fdb600;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -90,17 +100,72 @@ main img {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 80px;
+}
+
+.cardapio-haburgers, .cardapio-fritas, .cardapio-bebidas, .cardapio-sobremesas {
+    width: 100%;
+    height: 100%;
+}
+
+.cardapio-haburgers h2, .cardapio-fritas h2, .cardapio-bebidas h2, .cardapio-sobremesas h2 {
+    text-align: center;
     margin: 100px;
 }
 
 .cards {
     width: 300px;
-    height: 500px;
+    height: 450px;
     border: 1px solid black;
     margin: 20px;
     background-color: black;
     border-radius: 20px;
     box-shadow: 0 0 25px 5px #42fd00 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hbs {
+    width: 100%;
+}
+
+.descricao-hbs {
+    padding: 15px;
+    text-align: justify;
+    font-size: 20px;
+    width: 100%;
+    height: 150px;
+    overflow: auto;
+}
+
+.btns-cards {
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ height: 60px;
+ width: 100%;
+}
+
+.cards .btns-cards button {
+    height: 30px;
+    width: 120px;
+    background: none;
+    border: none;
+    color: #42fd00;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btns-cards button img {
+    width: 60px;
+    transition: all 2s ease-in-out;
+}
+
+.btns-cards button img:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 1px #fff);
 }
 
 hr {
