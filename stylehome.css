@@ -1,25 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #353030 ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    background-image: url(./imgs/Background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll;
 }
 
+/* barra de menu */ 
 header {
-    width: 100%;
+    width: 99%;
     height: 50px;
     background: #726C6C;
     border-radius: 0 0 25px 25px;
@@ -34,21 +23,26 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 270px;
+    width: 220px;
     height: 100%;
-    margin-left: 50px;
+    margin-left: 10px;
     color: #fdb600;
     font-size: 10px;
 }
 
 .direcao-index {
-    width: 40%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.direcao-index a {
+header a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    color: #fdb600;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .header-logo img {
@@ -59,26 +53,24 @@ header {
 }
 
 .header-login {
-    width: 100px;
+    width: 300px;
     height: 100%;
     display: flex;
     justify-content: center;
+    gap: 10px;
     align-items: center;
-    margin: 60px;
+    position: relative;
+    right: 30px;
+    cursor: pointer;
 }
 
 .header-login img {
-    width: 50px;
+    width: 30px;
 }
 
-header a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fdb600;
-    font-size: 30px;
-    font-weight: bold;
-}
+
+
+
 
 
 main {
