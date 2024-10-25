@@ -65,6 +65,8 @@ a {
 
 }
 
+
+
 .name {
   border-radius: 15px;
   border: none;
@@ -75,6 +77,13 @@ a {
   margin-bottom: 15px;
 
 }
+
+.name::placeholder {
+  border: none;
+  background-color: ;
+
+}
+
 
 .email input {
   border-radius: 15px;
@@ -116,20 +125,53 @@ a {
 
 input::placeholder {
   color: #fdb600;
-  background-color: ;
+  background-color: #726C6C;
+  outline: none;
+ 
 }
 
 .caixa {
   margin-top: 70px;
 }
 
-input:focus {
-  outline: none;
-}
+
 
 .caixa img {
   width: 40px;
 }
 
+.forget{
+  margin-top: 70px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
 
+.forget h1 {
+  color: #fdb600;
+
+}
+
+.primeira-senha {
+  border-radius: 15px;
+  border: none;
+  width: 250px;
+  height: 40px;
+  padding-left: 15px;
+  background-color: #726c6c;
+  color: #b6b6b6;
+  margin-top: 15px;
+}
+
+.segunda-senha {
+  border-radius: 15px;
+  border: none;
+  width: 250px;
+  height: 40px;
+  padding-left: 15px;
+  background-color: #726c6c;
+  color: #b6b6b6;
+  margin-top: 15px;
+}
 
