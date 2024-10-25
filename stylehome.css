@@ -43,6 +43,7 @@ header a {
     color: #fdb600;
     font-size: 25px;
     font-weight: bold;
+    z-index: 3;
 }
 
 .header-logo img {
@@ -62,15 +63,34 @@ header a {
     position: relative;
     right: 30px;
     cursor: pointer;
+    z-index: 3;
 }
 
 .header-login img {
     width: 30px;
+    transition: all 0.5s ease-in-out;
 }
 
+.carrinho-oculto {
+    width: 280px;
+    background-color: #726C6C;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
 
+.hidded {
+    display: none;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
 
-
+.rotacao {
+        transform: rotate(180deg);
+}
 
 
 main {
