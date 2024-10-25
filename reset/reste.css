@@ -9,6 +9,11 @@
 body {
     font-size: 30px;
     background-color: #353030;
+    background-image: url(../imgs/Background-home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {
