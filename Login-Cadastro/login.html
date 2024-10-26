@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../../reset/reste.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Login</title>
-</head>
-<body>
-  
-  <header>
-    <nav class="nav-bar">
-
-      <div class="logo">
-        <img src="../imgs/hamburgue-logo.png" alt="">
-        <h1> < CODE BURGER /> </h1>
-      </div>
-
-    </nav>
-  </header>
-
-  
-    <form id="form-login" action="#" method="post">
-
-      <section class="main-login">
-        <div class="caixa">
-
-           <img src="..//imgs/hamburgue-logo.png" alt="logo">
-          <h1>LOGIN</h1>
-          <div class="email">
-            <input type="email" placeholder="E-mail">
-          </div>
-  
-          <di class="senha">
-            <input type="password" placeholder="Senha">
-          </div>
-          <a href="#">Esqueci a Senha</a>
-  
-          <div class="entrar"> 
-            <P>Ainda não tem uma conta? <a href="cadastro.html">Crie uma.</a></P>
-            <input type="submit" value="Entrar">
-          </div>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../reset/reste.css">
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <div class="logo">
+          <a href="../index.html"><img src="../imgs/hamburgue-logo.png" alt="logo" /></a>
+          <h1>< CODE BURGER /></h1>
         </div>
-        
-      </section>
-    </form>
-  
-  
-</body>
+      </nav>
+    </header>
+
+
+      <div class="main-login">
+        <div class="img-left">
+          <img src="../imgs/hamburgue-logo.png" alt="logo">
+        </div>
+        <div class="left-login">
+        </div>
+        <div class="right-login">
+          <div class="card-login">
+            <h2>Login</h2>
+            <div class="textfield">
+              <label for="usuario">Usúario</label>
+              <input type="text" name="usuario">
+              <a href="#">Esqueci a senha</a>
+            </div>
+            <div class="textfield">
+               <label for="senha">Senha</label>
+               <input type="password" name="senha">
+               <a href="#">Ainda não tem uma conta? Crie uma.</a>
+            </div>
+            <button class="btn-login">Login</button>
+          </div>
+        </div>
+      </div>
+    
+
+  </body>
 </html>
