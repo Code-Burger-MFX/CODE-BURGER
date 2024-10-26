@@ -80,6 +80,12 @@ header a {
     top: 20px;
     z-index: 1;
     transition: all 0.5s ease-in-out;
+    border-radius: 0 0 20px 20px;
+}
+
+.carrinho-oculto a {
+    text-align: center;
+    margin-top: 40px;
 }
 
 .hidded {
@@ -93,6 +99,8 @@ header a {
 }
 
 
+
+
 main {
     width: 100%;
     position: relative;
@@ -100,7 +108,7 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 200px 0;
+    padding: 150px 0;
 }
 
 main img {
@@ -108,12 +116,13 @@ main img {
 }
 
 .produtos {
-    width: 80%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 80px;
 }
+
 
 .cardapio-haburgers, .cardapio-fritas, .cardapio-bebidas, .cardapio-sobremesas {
     width: 100%;

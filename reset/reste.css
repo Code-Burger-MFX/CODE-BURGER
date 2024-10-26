@@ -26,6 +26,11 @@ p {
     color: #fdb600;
 }
 
+a {
+    text-decoration: underline;
+    color: #fdb600;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     }
