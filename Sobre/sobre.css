@@ -1,9 +1,41 @@
 
+body{
+    overflow-x: hidden;
+}
+
 img {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 350px;
     border-radius: 50% ;
-    background-position: 5px;
+    background-position: 10px;
+    margin: 3px;
+
+}
+#solitario{
+    height: 300px;
+    width: 350px;
+    border-radius: 40px ;
+    background-position: 10px;
+    margin: 3px;
+
+}
+
+#diversos{
+    height: 300px;
+    width: 350px;
+    border-radius: 40px ;
+    background-position: 10px;
+    margin: 3px;
+
+
+}
+
+#logo{
+    height: 300px;
+    width: 350px;
+    border-radius: 40px ;
+    background-position: 10px;
+    margin: 3px;
 
 }
 
@@ -74,4 +106,18 @@ section{
     flex-direction: column;
     align-items: center;
     
+}
+
+.btn-voltar{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    z-index: 5;
+    bottom: 50px;
+    right: 40px; ;
+    display: flex;
+    
+ 
+
+
 }
