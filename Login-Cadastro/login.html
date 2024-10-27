@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../reset/reste.css">
+    <link rel="icon" href="../imgs/hamburgue-logo.png">
     <title>Login</title>
   </head>
   <body>
@@ -30,14 +31,25 @@
             <div class="textfield">
               <label for="usuario">Usúario</label>
               <input type="text" name="usuario">
-              <a href="#">Esqueci a senha</a>
             </div>
+
             <div class="textfield">
                <label for="senha">Senha</label>
                <input type="password" name="senha">
+
+               <div class="remember">
+                <div class="esqueci">
+                <a href="#">Esqueci a senha</a>
+                </div>
+                <label class="lembrar">
+                <input type="checkbox" name="remember">
+                <span >Lembrar-me</span>
+                </label>
+               </div>
+               
+               <button class="btn-login">Login</button>
                <a href="#">Ainda não tem uma conta? Crie uma.</a>
             </div>
-            <button class="btn-login">Login</button>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 
+
 header {
   background-color: #726c6c;
   box-shadow: 0px 3px 10px #464646;
@@ -6,7 +7,7 @@ header {
   border-bottom-right-radius: 40px;
 }
 
-.nav-bar {
+.menu {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 3rem;
@@ -25,152 +26,165 @@ header {
   height: 50px;
 }
 
-.logo h1 {
-  color: #fdb600;
-  font-size: 30px;
- 
-}
-
-.nav-login {
+.main-login {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.nav-login img {
-  width: 50px;
-  height: 50px;
-}
-
-.nav-login a {
-  color: #fdb600;
-  font-size: 20px;
-  font-weight: 900;
-  text-decoration: none;
-
-}
-
-
-a {
-  text-decoration: none;
-  color: #fdb600;
-}
-
-#form-login {
-  text-align: center;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+
+
+.left-login {
+  width: 50vw;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-
-.name {
-  border-radius: 15px;
-  border: none;
-  width: 250px;
-  height: 40px;
-  padding-left: 15px;
-  background-color: #726c6c;
-  margin-bottom: 15px;
-
+.right-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.name::placeholder {
-  border: none;
-  background-color: ;
-
-}
-
-
-.email input {
-  border-radius: 15px;
-  border: none;
-  width: 250px;
-  height: 40px;
-  padding-left: 15px;
-  background-color: #726c6c;
-  color: #b6b6b6;
-
-}
-
-.senha input {
-  border-radius: 15px;
-  border: none;
-  width: 250px;
-  height: 40px;
-  padding-left: 15px;
-  background-color: #726c6c;
-  color: #b6b6b6;
-  margin-top: 15px;
-}
-
-.entrar input {
-  cursor: pointer;
-  width: 120px;
-  height: 40px;
+.card-login {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background-color: #000000;
   border-radius: 20px;
-  border: none;
-  margin-top: 15px;
-  background-color: #42FD00;
-  color:#666;
+  box-shadow: 0px 10px 40px #42fd00;
+
 }
 
-.entrar p {
+.card-login > h2 {
+  font-weight: 800;
+  margin: 0;
+
+}
+
+.textfield {
+  width: 100%;
+   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+.textfield > a {
   margin-top: 10px;
+  color: #fdb600;
+  font-size: 15px;
+  text-decoration: none;
 }
 
-input::placeholder {
-  color: #fdb600;
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
   background-color: #726C6C;
+  color: #f0ffffde;
+  font-size: 12pt;
   outline: none;
- 
-}
-
-.caixa {
-  margin-top: 70px;
+  box-sizing: border-box;
 }
 
 
-
-.caixa img {
-  width: 40px;
+.textfield > label {
+  color: #42fd00;
+  margin-bottom: 10px;
 }
 
-.forget{
-  margin-top: 70px;
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
-}
 
-.forget h1 {
+.remember {
+
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
   color: #fdb600;
-
+  font-size: 15px;
+  cursor: pointer;
 }
 
-.primeira-senha {
-  border-radius: 15px;
-  border: none;
-  width: 250px;
-  height: 40px;
-  padding-left: 15px;
-  background-color: #726c6c;
-  color: #b6b6b6;
+.lembrar {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+.esqueci > a  {
+  text-decoration: none;
+}
+
+.remember input:checked + span {
+  color: #42fd00;
+}
+
+.btn-login {
+  width: 220px;
+  padding: 16px 0px;
   margin-top: 15px;
+  border-radius: 50px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #353030;
+  background-color: #42fd00;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #42fd00;
+
 }
 
-.segunda-senha {
-  border-radius: 15px;
-  border: none;
-  width: 250px;
-  height: 40px;
-  padding-left: 15px;
-  background-color: #726c6c;
-  color: #b6b6b6;
-  margin-top: 15px;
+@media only screen and (max-width: 950px){
+  .card-login{
+    width: 85%;
+
+  }
+  
 }
+
+@media only screen and (max-width: 600px){
+  .main-login{
+    flex-direction: column;
+  }
+  .left-login > h2 {
+    display: none;
+  }
+
+  .left-login{
+    width: 100%;
+    height: auto;
+  }
+
+  .right-login{
+    width: 100%;
+    height: auto;
+  }
+
+  .img-left {
+    width: 50vw;
+  }
+
+  .card-login{
+    width: 90%;
+  }
+}
+
+
+
+
+
 
