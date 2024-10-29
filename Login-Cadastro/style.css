@@ -63,12 +63,14 @@ body {
   align-items: center;
 }
 
-.img-left{
+
+.img-left img{
   position: absolute;
   top: 40px;
   left: 100px;
-  
- 
+  width: 600px;
+  opacity: 0.6;
+
   transform: rotate(-45deg);
 }
 
