@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../../reset/reste.css">
-  <title>Cadastro</title>
-</head>
-
-<body>
-
-  <header>
-    <nav class="nav-bar">
-
-      <div class="logo">
-        <img src="../imgs/hamburgue-logo.png" alt="">
-        <h1>
-          < CODE BURGER />
-        </h1>
-      </div>
-
-
-    </nav>
-  </header>
-
-
-  <form id="form-login" action="#" method="post">
-
-    <section class="main-login">
-      <div class="caixa">
-
-        <img src="..//imgs/hamburgue-logo.png" alt="logo">
-        <h1>Cadastro</h1>
-
-        <div class="name">
-          <input type="text" placeholder="Nome">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../reset/reste.css">
+    <link rel="icon" href="../imgs/hamburgue-logo.png">
+    <title>Criar Conta</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <div class="logo">
+          <a href="../index.html"><img src="../imgs/hamburgue-logo.png" alt="logo" /></a>
+          <h1>< CODE BURGER /></h1>
         </div>
+      </nav>
+    </header>
 
-        <div class="email">
-          <input type="email" placeholder="E-mail">
+
+      <div class="main-login">
+
+        <div class="img-left">
+          <img src="../imgs/hamburgue-logo.png" alt="logo">
         </div>
+        
+        <div class="left-login">
+        </div>
+        <div class="right-login">
+          <div class="card-login">
+            <h2>Criar Conta</h2>
 
-        <div class="senha">
-          <input type="password" placeholder="Senha">
+            <div class="textfield">
+              <label for="nome">Nome Completo</label>
+              <input type="text" name="nome">
+            </div>
+
+            <div class="textfield">
+              <label for="email">E-mail</label>
+              <input type="email" name="nome" required>
+            </div>
+
+            <div class="textfield">
+               <label for="senha">Senha</label>
+               <input type="password" name="senha">
+               <div id="icon">
+            
+               </div>
+            </div>
+
+            <div class="textfield">
+              <label for="senha"> Confirmar Senha</label>
+              <input type="password" name="senha">
+              <div id="icon"></div>
+           </div>
+
+            <button class="btn-login">Enviar</button>
+
+            <div class="ja-tenho-conta">
+              <a href="login.html">Ja tem uma conta? Entre aqui.</a>
+            </div>
+          </div>
+        </div>
       </div>
+    
 
-      <div class="senha">
-        <input type="password" placeholder="Confirme a sua senha">
-      </div>
-
-      
-      <div class="entrar">
-        <P>Ja tem uma conta? <a href="login.html">Entre Aqui</a></P>
-        <input type="submit" value="Entrar">
-      </div>
-
-      </div>
-
-    </section>
-  </form>
-
-
-</body>
-
+  </body>
 </html>
