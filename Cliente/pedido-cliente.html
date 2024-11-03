@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="../reset/reste.css">
-    <link rel="stylesheet" href="../Cliente/pedido-cliente.css">
-    <title>Histórico Pedido Cliente </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../reset/reste.css" />
+    <link rel="stylesheet" href="../Cliente/pedido-cliente.css" />
+    <title>Histórico Pedido Cliente</title>
+  </head>
+  <body>
     <header>
-        <nav class="menu">
-          <div class="logo">
-            <a href="../index.html"><img src="../imgs/hamburgue-logo.png" alt="logo" /></a>
-            <h1>< CODE BURGER /></h1>
+      <nav class="menu">
+        <div class="logo">
+          <a href="../index.html"
+            ><img src="../imgs/hamburgue-logo.png" alt="logo"
+          /></a>
+          <h1>< CODE BURGER /></h1>
+        </div>
+      </nav>
+    </header>
+
+    <h2>Histórico De Pedido De Cliente</h2>
+
+    <main class="main-historico">
+      <section class="box-1">
+        <div class="div-dados">
+          <h3>
+            Nome Usúario <br />
+            <span>Email@usuario.com</span>
+          </h3>
+
+          <p>01/11/2024 | R$ 200,00</p>
+        </div>
+
+        <hr />
+      </section>
+
+      <section class="box-2">
+        <div class="numero-pedido">
+          <p>Pedido 24513564</p>
+        </div>
+
+        <div class="pedido-1">
+          <div class="pedido-1-img">
+            <img src="../imgs/fritas.png" alt="fritas" />
           </div>
-        </nav>
-      </header>
-      
-      <h2>Histórico De Pedido De Cliente</h2>
 
-      <main class="main-historico">
-        <section class="box-1">
-            <div class="div-dados">
-              <h3>Nome Usúario <br> <span>Email@usuario.com</span></h3>
-              
-              <p>01/11/2024 | R$ 200,00</p>
-              
-            </div>
+          <div class="pedido-1-descricao">
+            <h4>Nome do produto</h4>
+            <p>
+              Lorem ipsum dolor sit amet <br />
+              consectetur adipisicing elit.
+            </p>
+            <br />
+          </div>
 
-            <hr>
-            
-        </section>
+          <div>
+            <p>1 un - R$ 46,00</p>
+          </div>
+        </div>
+      </section>
 
+      <section class="box-2">
+        <div class="pedido-1">
+          <div class="pedido-1-img">
+            <img src="../imgs/x-bacon1.png" alt="fritas" />
+          </div>
 
+          <div class="pedido-1-descricao">
+            <h4>Nome do produto</h4>
+            <p>
+              Lorem ipsum dolor sit amet <br />
+              consectetur adipisicing elit.
+            </p>
+            <br />
+          </div>
 
-      </main>
+          <div>
+            <p>1 un - R$ 100,00</p>
+          </div>
+        </div>
 
+      </section>
 
+      <hr>
 
-     
+      <div class="button-status">
+        <button>Status Do Pedido</button>
+      </div>
 
-
-</body>
+    </main>
+  </body>
 </html>
