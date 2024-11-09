@@ -6,6 +6,36 @@
     box-sizing: border-box;
 }
 
+header {
+  position: fixed;
+  background-color: #726c6c;
+  box-shadow: 0px 3px 10px #464646;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 99%;
+  height: 50px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    height: 50px;
+    width: 99%;
+  }
+  
+  .logo {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 60px;
+    height: 50px;
+  }
+
+
 body {
     background-color: #353030;
     background-image: url(../imgs/Background-home.png);
@@ -19,6 +49,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Jersey 25", sans-serif;
     color: #fdb600;
+}
+
+h1 {
+  font-size: 25px;
 }
 
 p {
