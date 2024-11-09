@@ -53,7 +53,7 @@ header {
    border-style: solid;
    height: 50px;
    margin-bottom: 10px;
-   border-color: rgb(0, 14, 1);
+   
  
 
   }
@@ -86,12 +86,16 @@ header {
 
   .caixa{
     margin: 100px;
-    
+
   }  
 
   img{
 padding: 5px;
 
+  }
+
+  .caixa{
+    
   }
 
  
