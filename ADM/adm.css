@@ -47,5 +47,51 @@ header {
     
 
   }
+
+  #acompanhamento {
+    display: flex;
+   border-style: solid;
+   height: 50px;
+   margin-bottom: 10px;
+   border-color: rgb(0, 14, 1);
+ 
+
+  }
+
+  #cadastro{
+    display: flex;
+    border-style: solid;
+   height: 50px;
+   margin-bottom: 10px;
+ 
   
-  
+  }
+
+  #central{
+    display: flex;
+    border-style: solid;
+    height: 50px;
+    margin-bottom: 10px;
+ 
+  }
+
+  #informaçoes{
+    display: flex;
+    border-style: solid;
+    height: 50px;
+    margin-bottom: 10px;
+ 
+
+  }
+
+  .caixa{
+    margin: 100px;
+    
+  }  
+
+  img{
+padding: 5px;
+
+  }
+
+ 
