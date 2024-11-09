@@ -7,39 +7,69 @@
 }
 
 body {
-    background-color: #353030;
-    background-image: url(../imgs/Background-home.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll;
-    padding: 0 5px;
+  background-color: #353030;
+  background-image: url(../imgs/Background-home.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  padding: 0 5px;
+  
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Jersey 25", sans-serif;
-    color: #fdb600;
+header {
+  position: fixed;
+  background-color: #726c6c;
+  box-shadow: 0px 3px 10px #464646;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 99%;
+  height: 50px;
 }
 
-p {
-    color: #fdb600;
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  height: 50px;
+  width: 99%;
+}
+  
+.logo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+  
+.logo img {
+  width: 60px;
+  height: 50px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Jersey 25", sans-serif;
+  color: #fdb600;
+}
+
+h1 {
+  font-size: 25px;
 }
 
 a {
-    text-decoration: underline;
-    color: #fdb600;
-    font-family: "Jersey 25", sans-serif;
+  text-decoration: underline;
+  color: #fdb600;
+  font-family: "Jersey 25", sans-serif;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    }
-    
-    ::-webkit-scrollbar-track {
-    background-color: #353030;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #42fd00;
-    }
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #353030;
+}
+  
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #42fd00;
+}

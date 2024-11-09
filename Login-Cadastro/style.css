@@ -1,37 +1,25 @@
-
-
-header {
-  background-color: #726c6c;
-  box-shadow: 0px 3px 10px #464646;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
- 
-}
-
 body {
   overflow: hidden;
-
-
+  width: 100vw;
+  height: 100vh;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 3rem;
-  height: 50px;
- 
+header {
+  z-index: 10;
 }
 
-.logo {
+.logo a {
   display: flex;
-  gap: 30px;
   align-items: center;
-  
+  text-decoration: none;
+  gap: 20px;
 }
 
-.logo img {
-  width: 60px;
-  height: 50px;
+main {
+  display: flex;
+  justify-content: end;
+  width: 100vw;
+  height: 100vh;
 }
 
 .main-login {
@@ -45,14 +33,9 @@ body {
 }
 
 
-
 .left-login {
   width: 50vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .right-login {
@@ -69,45 +52,34 @@ body {
   top: 40px;
   left: 100px;
   width: 600px;
-  opacity: 0.6;
-
+  opacity: 0.2;
   transform: rotate(-45deg);
+  z-index: -1;
 }
 
 .card-login {
   width: 60%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding: 30px 35px;
   background-color: #000000;
   border-radius: 20px;
   box-shadow: 0px 10px 40px #42fd00;
-
 }
 
 .card-login > h2 {
   font-weight: 800;
-  margin: 0;
-
 }
 
 .textfield {
   width: 100%;
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   margin: 10px;
-
-}
-
-.textfield > a {
-  margin-top: 10px;
-  color: #fdb600;
-  font-size: 15px;
-  text-decoration: none;
 }
 
 .textfield > input {
@@ -119,22 +91,18 @@ body {
   color: #f0ffffde;
   font-size: 12pt;
   outline: none;
-  box-sizing: border-box;
 }
-
 
 .textfield > label {
   color: #42fd00;
   margin-bottom: 10px;
 }
 
-
 .remember {
-
   padding: 5px;
   display: flex;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 50px;
   margin-top: 10px;
   color: #fdb600;
   font-size: 15px;
@@ -146,6 +114,7 @@ body {
   gap: 5px;
   cursor: pointer;
 }
+
 .esqueci > a  {
   text-decoration: none;
 }
@@ -154,16 +123,9 @@ body {
   margin-top: 10px;
   color: #fdb600;
   font-size: 15px;
- 
 }
 
-.ja-tenho-conta > a{
-  text-decoration: none;
-}
-
-
-
-.remember input:checked + span {
+.remember input:checked {
   color: #42fd00;
 }
 
@@ -179,21 +141,23 @@ body {
   background-color: #42fd00;
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px #42fd00;
-
 }
 
-@media only screen and (max-width: 950px){
+
+
+@media only screen and (max-width: 950px) {
+
   .card-login{
     width: 85%;
-
   }
   
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   .main-login{
     flex-direction: column;
   }
+
   .left-login > h2 {
     display: none;
   }
@@ -216,9 +180,3 @@ body {
     width: 90%;
   }
 }
-
-
-
-
-
-

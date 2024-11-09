@@ -1,123 +1,68 @@
-
 body{
     overflow-x: hidden;
+    width: 100vw;
+}
+
+.btn-voltar{
+    width: 100px;
+    height: 60px;
+    position: fixed;
+    z-index: 5;
+    bottom: 40px;
+    right: 30px; ;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-voltar:hover {
+    transform: scale(1.5);
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    margin: 50px 0;
 }
 
 img {
     height: 300px;
     width: 350px;
-    border-radius: 50% ;
-    background-position: 10px;
-    margin: 3px;
-
-}
-#solitario{
-    height: 300px;
-    width: 350px;
-    border-radius: 40px ;
-    background-position: 10px;
-    margin: 3px;
-
 }
 
-#diversos{
-    height: 300px;
-    width: 350px;
-    border-radius: 40px ;
-    background-position: 10px;
-    margin: 3px;
-
-
-}
-
-#logo{
-    height: 300px;
-    width: 350px;
-    border-radius: 40px ;
-    background-position: 10px;
-    margin: 3px;
-
-}
-
-#caixa {
+.caixa {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     color: rgb(81, 156, 7);
     width: 700px;
     text-align: justify;
     line-height: 1.5;
     font-size: 18px;
-    
-}
-h2 {color: gold;
-
-                       }
-
-section{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-    height: 500px;
-    align-items: center;
-
 }
 
-#caixa2{
+#reverse {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgb(81, 156, 7);
-    width:700px;
-    text-align: center;
-    line-height: 1.5;
-    font-size: 18px;
-
-}
-
-#pai{
-    display: flex;
-    justify-content: baseline;
-    width: 100%;
-    height: 300px;
     flex-direction: row-reverse;
 }
-#caixa3{
+
+.imgs-infos {
+    border-radius: 50px;
+    box-shadow: 0 0 10px 5px #42fd00;
+}
+
+.nos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgb(81, 156, 7);
-    width:700px;
-    text-align: center;
-    line-height: 1.5;
-    font-size: 18px;
-}
-#nos{
-    display: flex;
-    flex-direction: row;
-    align-content: baseline;
-    margin-top: 100px;
-
+    justify-content: center;
+    gap: 20px;
 }
 
-
-#nos div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-.btn-voltar{
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    z-index: 5;
-    bottom: 50px;
-    right: 40px; ;
-    display: flex;
-    
- 
-
-
+.nos img {
+    border-radius: 50%;
+    margin: auto;
 }
