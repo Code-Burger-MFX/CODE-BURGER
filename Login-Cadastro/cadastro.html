@@ -8,12 +8,16 @@
     <link rel="icon" href="../imgs/hamburgue-logo.png">
     <title>Criar Conta</title>
   </head>
+
   <body>
+
     <header>
       <nav class="menu">
         <div class="logo">
-          <a href="../index.html"><img src="../imgs/hamburgue-logo.png" alt="logo" /></a>
-          <h1>< CODE BURGER /></h1>
+          <a href="../index.html">
+            <img src="../imgs/hamburgue-logo.png" alt="logo" />
+            <h1>< CODE BURGER /></h1>
+        </a>
         </div>
       </nav>
     </header>
@@ -25,15 +29,17 @@
           <img src="../imgs/hamburgue-logo.png" alt="logo">
         </div>
         
-        <div class="left-login">
-        </div>
+        <div class="left-login"></div>
+
         <div class="right-login">
+
           <div class="card-login">
+
             <h2>Criar Conta</h2>
 
             <div class="textfield">
               <label for="nome">Nome Completo</label>
-              <input type="text" name="nome">
+              <input type="text" name="nome" required>
             </div>
 
             <div class="textfield">
@@ -43,27 +49,25 @@
 
             <div class="textfield">
                <label for="senha">Senha</label>
-               <input type="password" name="senha">
-               <div id="icon">
-            
-               </div>
+               <input type="password" name="senha" required>
             </div>
 
             <div class="textfield">
               <label for="senha"> Confirmar Senha</label>
-              <input type="password" name="senha">
-              <div id="icon"></div>
+              <input type="password" name="senha" required>
            </div>
 
             <button class="btn-login">Enviar</button>
 
             <div class="ja-tenho-conta">
-              <a href="login.html">Ja tem uma conta? Entre aqui.</a>
+              <p>Ja tem uma conta? <a href="login.html">Entre aqui.</a></p> 
             </div>
+
           </div>
+
         </div>
+        
       </div>
     
-
   </body>
 </html>
