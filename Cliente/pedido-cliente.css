@@ -140,37 +140,160 @@ hr {
   gap: 550px;
 }
 
-.carrinho {
+.section-txt h2 {
+  color: #42fd00;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 150px;
 }
+
+.section-txt p {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 150px;
+}
+
 
 .carrinho {
   margin-top: 45px;
+  
 }
 
 .resumo-pedido {
+ 
+  width: 500px;
+  height: 200px;
+  display: flex;
   margin-top: 50px;
+  margin-right: 50px;
+}
+
+.txt-resumo {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.txt-resumo-1 h3 {
+  
+  color: #42fd00;
+  font-size: 25px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-left: px;
+  
+}
+
+.txt-resumo-1 p {
+  margin-left: 0;
+  margin-right: 80px;
+  margin-bottom: 15px;
+
+}
+
+.txt-resumo-2  {
+  margin-top: 65px;
+  margin-bottom: 0;
+}
+
+.txt-resumo-2 p {
+  
+  margin-bottom: 15px;
+}
+
+.color-green {
+  color: #42fd00;
 }
 
 .pedidos {
   display: flex;
   flex-direction: column;
   gap: 35px;
-  border: solid 1px black;
-  margin-top: 25px;
-  width: 600px;
+ 
+  margin-top: 15px;
+  width: 800px;
   height: 400px;
   padding: 70px;
   overflow: auto;
-
 }
 
 .produto-1 {
-  border: solid 1px black;
-  padding: 70px;
-  width: 100%;
-  height: 370px;
   background-color: black;
+  display: flex;
+  gap: 20px;
+  width: 700px;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px #42fd00;
+}
+
+.produto-1-img img {
+  width: 150px;
+  height: 150px;
+  
+}
+
+.nome-produto {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 
 }
+
+.nome-produto h3 {
+  color: #42fd00;
+}
+
+.nome-produto img {
+  width: 30px;
+  height: 34px;
+
+} 
+
+
+
+.produto-1-descricao {
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+.box-valor-quantidade{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.valor-total {
+
+}
+
+.quantidade {
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px white;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  width: 80px;
+  height: 40px;
+}
+
+.voltar-comprar {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  font-size: 40px;
+  gap: 50px;
+  margin-right: 100px;
+ 
+}
+
+.voltar-comprar a {
+  text-decoration: none;
+}
+
 
 
