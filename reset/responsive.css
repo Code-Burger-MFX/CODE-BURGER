@@ -3,65 +3,65 @@
 
    /* home */
    h1 {
-        font-size: 15px;
+      font-size: 15px;
    }
    header #topo-logo img {
-	width:25px;
-	height:20px;
+	   width:25px;
+   	height:20px;
    }
    header .header-logo {
-	width: 180px;
-	margin-left: 10px;
+   	width: 180px;
+   	margin-left: 10px;
    }
    header .direcao-index a {
-	font-size: 15px;
-	display: none;
+      font-size: 15px;
+	   display: none;
    }
    .menu-pequeno {
     	display: block;
    }
-     header .menu-pequeno a{
+   header .menu-pequeno a{
     	font-size: 200px;
    }
    header .header-login {
-	right: 10%;
+   	right: 10%;
    }
    header .header-login img {
-	width:15px;
+	   width:15px;
    }
    header .carrinho-oculto a {
-	font-size: 20px;
+	   font-size: 20px;
    }
    #ffundo {
-  	right:0;
+   	right:0;
    }
-   #topo-page-index main img {
-	width: 300px;
+   main img {
+	   width: 300px;
    }
-   #topo-page-index main .produtos .cards {
-	width: 210px;
-	height: 350px;
+   main .produtos .cards {
+	   width: 210px;
+	   height: 350px;
    }
    .produtos {
-	justify-content: space-evenly;
-	align-items: center;
-	width:100%;
+   	justify-content: space-evenly;
+   	align-items: center;
+	   width:100%;
    }
    .cards .btns-cards button {
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
    }
    footer .link-rodape iframe {
-	width: 200px;
+	   width: 200px;
    }
    footer {
-	width:100%;
-	letter-spacing: 2px;
-	gap: 10px;
+	   width:100%;
+   	letter-spacing: 2px;
+	   gap: 10px;
    }
    footer .caixa-conteudo img {
-	width: 100px;
+	   width: 100px;
    }
    footer .caixa-conteudo .contatos div img {
     	width: 15px;
@@ -69,66 +69,66 @@
    footer .caixa-conteudo .caixa-texto-infos {
    	width: 250px;
    	font-size: 10px;
-	gap: 5px;
+   	gap: 5px;
    }
    footer .caixa-texto-infos .link-rodape {
- 	font-size: 12px;
-  	width: 300px;
+ 	   font-size: 12px;
+     	width: 300px;
    }
    .final-page {
-	font-size: 10px;
+	   font-size: 10px;
    }
 
 
    /* sobre */
    .section-sobre {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: auto;
-	margin: 50px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      margin: 50px 0;
    }
     .section-sobre img {
    	height: 170px;
-  	width: 225px;
-	margin: 25px 0;
+      width: 225px;
+      margin: 25px 0;
    }
     .section-sobre .caixa {
-	width: 360px;
-	position: relative;
-	right: 20px;
+      width: 360px;
+      position: relative;
+      right: 20px;
    }
     .btn-voltar {
-	right:0px;
+	   right:0px;
    }
     .section-sobre#reverse {
-	flex-direction: column;
+   	flex-direction: column;
    }
 
 
    /* login cadastro forget */
    .logo img {
-  	width: 30px;
-  	height: 25px;
+      width: 30px;
+      height: 25px;
    }
 
    .remember {
-	padding: 5px;
-	gap: 20px;
+      padding: 5px;
+      gap: 20px;
    }
    .card-login {
-  	width: 300px;
+      width: 300px;
    }
 
 
 
    ::-webkit-scrollbar {
-  	width: 4px;
+      width: 4px;
    }
   ::-webkit-scrollbar-thumb {
-  	border-radius: 10px;
-  	background-color: #42fd00;
+      border-radius: 10px;
+      background-color: #42fd00;
    }
 
 
