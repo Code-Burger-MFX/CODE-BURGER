@@ -1,5 +1,6 @@
 const btnMenu = document.getElementById('menu');
 var listCarrinho = document.querySelector('.carrinho-oculto');
+const iconeRotatorio = document.getElementById('btn-menu-rotatorio');
 
 
 btnMenu.addEventListener('click', () => {
@@ -7,5 +8,5 @@ btnMenu.addEventListener('click', () => {
    listCarrinho.classList.toggle('hidded');
 
    listCarrinho.style.opacity = listCarrinho.classList.contains('hidded') ? '0' : '1';
-   btnMenu.classList.toggle('rotacao');
+   iconeRotatorio.classList.toggle('rotacao');
 });
