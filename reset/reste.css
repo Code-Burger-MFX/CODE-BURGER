@@ -4,17 +4,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 1s ease;
 }
 
 body {
   background-color: #353030;
-  background-image: url(../imgs/Background-home.png);
+  background-image: url(../imgs/fundos/Background-home.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
-  padding: 0 5px;
-  
+  min-width: 500px;
 }
 
 header {
@@ -23,8 +23,12 @@ header {
   box-shadow: 0px 3px 10px #464646;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  width: 99%;
+  min-width: 500px;
+  width: 100%;
   height: 50px;
+  top: 0;
+  left:0;
+  z-index: 8;
 }
 
 .menu {
@@ -63,10 +67,6 @@ a {
 
 ::-webkit-scrollbar {
   width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #353030;
 }
   
 ::-webkit-scrollbar-thumb {

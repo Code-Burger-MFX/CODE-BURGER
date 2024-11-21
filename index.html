@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="imgs/hamburgue-logo.png">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="imgs/icons/hamburgue-logo.png">
   <title>< Code Burger /></title>
   <link rel="stylesheet" href="stylehome.css">
   <link rel="stylesheet" href="./reset/reste.css">
+  <link rel="stylesheet" href="./reset/responsive.css">
 </head>
 
 <body id="topo-page-index">
@@ -15,9 +16,9 @@
 
   <header>
 
-    <a href="#topo-page-index">
+    <a id="topo-logo" href="#topo-page-index">
       <div class="header-logo">
-        <img src="imgs/hamburgue-logo.png" alt="imagem do logo">
+        <img src="imgs/icons/hamburgue-logo.png" alt="imagem do logo">
         <h1>< CODE BURGER /></h1>
       </div>
     </a>
@@ -30,7 +31,7 @@
       </a>
 
       <a href="#cards-frits">
-        <h6>Fritas e Acompanhamentos</h6>
+        <h6>Acompanhamentos</h6>
       </a>
 
       <a href="#cards-bebs">
@@ -40,79 +41,153 @@
       <a href="#cards-sobs">
         <h6>Sobremesas</h6>
       </a>
-
     </div>
 
 
-    <div class="header-login">
+    <div class="header-login" id="menu">
       <h6>Menu</h6>
-      <img src="./imgs/Vector-more.png" class="" id="menu" alt="icone de mais informação"> 
+      <img src="./imgs/home/Vector-more.png" id="btn-menu-rotatorio" alt="icone de mais informação"> 
     </div>
+   
+    <div class="menu-pequeno">
+
+    </div>
+
 
     <div class="carrinho-oculto hidded">
+
+   <div id="ffundo"></div>
+
   <a href="./Login-Cadastro/login.html">Login</a>
+	<br>
+
+
+      <div class="menu-pequeno">
+
+        <a href="#cards-hbs" class="nav-menu-oculto">
+          <h6>Hambúrguers</h6>
+        </a>
+
+        <a href="#cards-frits" class="nav-menu-oculto">
+          <h6>Acompanhamentos</h6>
+        </a>
+
+        <a href="#cards-bebs" class="nav-menu-oculto">
+          <h6>Bebidas</h6>
+        </a>
+
+        <a href="#cards-sobs" class="nav-menu-oculto">
+          <h6>Sobremesas</h6>
+        </a>
+     </div>
+
     </div>
 
   </header>
 
 
+
   <main>
 
-    <img src="./imgs/Logo-com-nome.png" alt="imagem do logo da loja">
+    <img src="./imgs/icons/Logo-com-nome.png" alt="imagem do logo da loja">
 
     <hr>
 
     <div class="produtos">
 
+	<h2>Hambúrguers</h2>
+
       <div id="cards-hbs" class="cardapio-haburgers">
 
-        <h2>Hambúrguers</h2>
-
         <div class="cards">
-          <img src="./imgs/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
+          <img src="./imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
           <h3>Hambúrguer</h3>
           <div class="descricao-cards">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
               quam quia deserunt voluptatum repellat nihil, maxime quaerat odit quo ducimus unde qui, natus ipsam iure.
             </p>
           </div>
-
           <div class="btns-cards">
             <button>R$ 20,00</button>
-            <button><img src="./imgs/Carrinho.png" alt="carrinho de produtos"></button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
           </div>
-
         </div>
-      </div>
 
-      <div id="cards-frits" class="cardapio-fritas">
+        <div class="cards">
+          <img src="./imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
+          <h3>Hambúrguer</h3>
+          <div class="descricao-cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
+              quam quia deserunt voluptatum repellat nihil, maxime quaerat odit quo ducimus unde qui, natus ipsam iure.
+            </p>
+          </div>
+          <div class="btns-cards">
+            <button>R$ 20,00</button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
+          </div>
+        </div>
+
+        <div class="cards">
+          <img src="./imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
+          <h3>Hambúrguer</h3>
+          <div class="descricao-cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
+              quam quia deserunt voluptatum repellat nihil, maxime quaerat odit quo ducimus unde qui, natus ipsam iure.
+            </p>
+          </div>
+          <div class="btns-cards">
+            <button>R$ 20,00</button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
+          </div>
+        </div>
+
+
+        <div class="cards">
+          <img src="./imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
+          <h3>Hambúrguer</h3>
+          <div class="descricao-cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
+              quam quia deserunt voluptatum repellat nihil, maxime quaerat odit quo ducimus unde qui, natus ipsam iure.
+            </p>
+          </div>
+          <div class="btns-cards">
+            <button>R$ 20,00</button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
+          </div>
+        </div>
+
+      </div>
 
         <h2>Fritas e Acompanhamentos</h2>
 
+
+      <div id="cards-frits" class="cardapio-fritas">
+
         <div class="cards">
-          <img src="./imgs/fritas.png" alt="batata frita com cheddar e bacon" class="imgs-cards">
+          <img src="./imgs/produtos/fritas.png" alt="batata frita com cheddar e bacon" class="imgs-cards">
           <h3>batata DeBug</h3>
           <div class="descricao-cards">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
               quam quia deserunt voluptatum repellat nihil, maxime quaerat odit quo ducimus unde qui, natus ipsam iure.
             </p>
           </div>
-
           <div class="btns-cards">
             <button>R$ 10,00</button>
-            <button><img src="./imgs/Carrinho.png" alt="carrinho de produtos"></button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
           </div>
-
         </div>
+
       </div>
+
+
+
+        <h2>Bebidas</h2>
 
 
       <div id="cards-bebs" class="cardapio-bebidas">
 
-        <h2>Bebidas</h2>
-
         <div class="cards">
-          <img src="./imgs/bebidas.png" alt="bebidas de sua preferencia" class="imgs-cards">
+          <img src="./imgs/produtos/bebidas.png" alt="bebidas de sua preferencia" class="imgs-cards">
           <h3>Refrigerante</h3>
           <div class="descricao-cards">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
@@ -122,19 +197,21 @@
 
           <div class="btns-cards">
             <button>R$ 9,90</button>
-            <button><img src="./imgs/Carrinho.png" alt="carrinho de produtos"></button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
           </div>
 
         </div>
       </div>
 
 
-      <div id="cards-sobs" class="cardapio-sobremesas">
-
         <h2>Sobremesas</h2>
 
+
+      <div id="cards-sobs" class="cardapio-sobremesas">
+
+
         <div class="cards">
-          <img src="./imgs/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+          <img src="./imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
           <h3>Pudim?</h3>
           <div class="descricao-cards">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
@@ -144,7 +221,7 @@
 
           <div class="btns-cards">
             <button>R$ 12,00</button>
-            <button><img src="./imgs/Carrinho.png" alt="carrinho de produtos"></button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
           </div>
 
         </div>
@@ -161,7 +238,7 @@
   <footer>
     <div class="caixa-conteudo">
 
-      <img src="./imgs/Logo-com-nome.png" alt="logo">
+      <img src="./imgs/icons/Logo-com-nome.png" alt="logo">
 
       <div class="caixa-texto-infos">
 
@@ -169,17 +246,17 @@
 
         <div class="contatos">
           <div>
-            <img src="./imgs/icons/logo whatsapp.png" alt="logo whatsapp">
+            <img src="./imgs/home/logo whatsapp.png" alt="logo whatsapp">
             <p>(11) 9 3087-6062</p>
           </div>
           <div>
-            <img src="./imgs/icons/logo instagram.png" alt="logo do instagram">
+            <img src="./imgs/home/logo instagram.png" alt="logo do instagram">
             <p>instagram</p>
           </div>
         </div>
         
         <a class="link-rodape" href="https://www.google.com.br/maps/place/Av.+Marqu%C3%AAs+de+S%C3%A3o+Vicente,+1619+-+Barra+Funda,+S%C3%A3o+Paulo+-+SP,+01139-003/@-23.5199949,-46.6788854,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef806a15a46cb:0xcae1c37fd3c1549c!8m2!3d-23.5199998!4d-46.6763105!16s%2Fg%2F11cpfmr9ry?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.347664023878!2d-46.67888542504995!3d-23.519994860073055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef806a15a46cb%3A0xcae1c37fd3c1549c!2sAv.%20Marqu%C3%AAs%20de%20S%C3%A3o%20Vicente%2C%201619%20-%20Barra%20Funda%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001139-003!5e0!3m2!1spt-BR!2sbr!4v1730475139862!5m2!1spt-BR!2sbr" width="350" height="200" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.347664023878!2d-46.67888542504995!3d-23.519994860073055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef806a15a46cb%3A0xcae1c37fd3c1549c!2sAv.%20Marqu%C3%AAs%20de%20S%C3%A3o%20Vicente%2C%201619%20-%20Barra%20Funda%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001139-003!5e0!3m2!1spt-BR!2sbr!4v1730475139862!5m2!1spt-BR!2sbr" width="350" height="200" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
           AV. MARQUÊS DE SÃO VICENTE, 1690</a>
       </div>
 
