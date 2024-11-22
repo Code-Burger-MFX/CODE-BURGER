@@ -8,8 +8,47 @@ header {
     gap: 100px;
 }
   
+#btn-voltar-adm{
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  font-size: 30px;
+  transition: all 0.2s ease-in-out;
+
+  
+}
+
+
+
+#btn-voltar-adm:hover{
+  transform: scale(1.2);
+
+
+
+}
+
+#btn-sair-adm{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 30px;
+  transition: all 0.2s ease-in-out;
+
+
+
+}
+
+#btn-sair-adm:hover{
+  transform: scale(1.2);
+
+
+}
+
+
+
+
   body {
-    overflow: hidden;
+   
     height: 100vh;
 
   }
@@ -19,62 +58,43 @@ header {
    
     
   }
-  #conteudo{
+  main{
     display: flex;
     justify-content: center;
     align-items: end;
+    margin: 100px;
+    
     
 
   }
 
-  #acompanhamento {
+  .menu-adm {
     display: flex;
    border-style: solid;
-   height: 50px;
    margin-bottom: 10px;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 40px;
+   width: 400px;
+   font-size: 22px;
+
    
  
 
   }
 
-  #cadastro{
-    display: flex;
-    border-style: solid;
-   height: 50px;
-   margin-bottom: 10px;
  
+   
+    
+
+
   
-  }
-
-  #central{
-    display: flex;
-    border-style: solid;
-    height: 50px;
-    margin-bottom: 10px;
- 
-  }
-
-  #informaçoes{
-    display: flex;
-    border-style: solid;
-    height: 50px;
-    margin-bottom: 10px;
- 
-
-  }
-
-  .caixa{
-    margin: 100px;
-
-  }  
 
   img{
-padding: 5px;
+width: 60px;
 
   }
 
-  .caixa{
-    
-  }
+  
 
  
