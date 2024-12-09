@@ -42,9 +42,49 @@ a h6:hover {
     position: fixed;
     top: 50%;
     left: 50%;
+    border-radius: 20px;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 25px 5px #42fd00 ;
     z-index: 10;
+    padding: 30px;
 }
+
+.menu-add-itens {
+    width: 100%;
+    text-align: center;
+}
+
+.close-add-itens {
+    background: #606061;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -10px;
+    text-align: center;
+    top: -8px;
+    width: 35px;
+    text-decoration: none;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+  }
+  
+.close-add-itens:hover {
+    background: #b50909;
+}
+
+#add-name-prod {
+    width: 300px;
+}
+
+.menu-add-itens label {
+    color: #fdb600;
+}
+
+
+
+
+
 
 .cards {
     width: 300px;
