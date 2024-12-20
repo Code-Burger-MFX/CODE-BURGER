@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="icon" href="../../imgs/hamburgue-logo.png">
+    <link rel="icon" href="../../imgs/icons/hamburgue-logo.png">
     <link rel="stylesheet" href="./produtos.css">
     <link rel="stylesheet" href="../../reset/reste.css">
 </head>
@@ -24,29 +24,61 @@
 <a href="../adm.html"><h6>< Voltar ></h6></a>
 
 
-<section id="add-itens">
-  
+  <section id="add-itens">
+
+ <div id="caixa-add-itens">
+
   <div class="menu-add-itens">
+    <h2>Adicionar Produtos</h2>
     <a href="#close" class="close-add-itens"> X </a>
-    <label for="add-name-prod">Nome do produto</label>
-    <input type="text" id="add-name-prod">
    </div>
+
 
    <div class="conteudo-add-itens">
    
-    
+     <div class="campo-add-itens">
+       <label for="add-prod-name">Nome do Produto</label>
+       <input type="text" id="add-prod-name" name="add-prod-name"> 
+     </div>
+
+     <div class="campo-add-itens">
+       <label for="add-prod-valor">Valor do Produto</label>
+       <input type="number" id="add-prod-valor" name="add-prod-valor"> 
+     </div>
+
+     <div class="campo-add-itens">
+	<select id="add-prod-categoria" > 
+	  <option selected disabled>Selecione uma categoria</option>
+	  <option value="hb">Hamburgers</option>
+	  <option value="comp">Fritas</option>
+	  <option value="bebs">Bebidas</option>
+	</select>
+     </div>
+
+    <div class="campo-add-itens img-produto">
+       <label for="add-prod-img">Imagem do Produto</label>
+       <input type="file" id="add-prod-img" name="add-prod-img"> 
+     </div>
+
+        <div class="campo-add-itens">
+       <label for="add-prod-descricao">Valor do Produto</label>
+       <textarea type="text" id="add-prod-descricao" name="add-prod-descricao"> </textarea>
+     </div>
+
+    <div class="campo-add-itens">
+	<button onclick="pegaInfos()">Cadastrar Produto</button>
+    </div>
+
    </div>
+  
+  </div>
 
 </section>
 
-
-<section id="edita-itens">
-
-</section>
 
       <main>
 
-        <a href="#menu-add-itens" id="">
+        <a href="#add-itens">
         <div class="cards card-add">
           <img src="../../imgs/icons/addproduto.png">
           <h5>Adicionar mais produto</h5>
@@ -122,5 +154,6 @@
 
       </main>
 
+   <script src="../appadm.js"></script>
 </body>
 </html>
