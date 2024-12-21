@@ -48,16 +48,11 @@
 
      <div class="campo-add-itens">
 	<select id="add-prod-categoria" > 
-	  <option selected disabled>Selecione uma categoria</option>
+	  <option value="notSelect" selected disabled>Selecione uma categoria</option>
 	  <option value="hb">Hamburgers</option>
 	  <option value="comp">Fritas</option>
 	  <option value="bebs">Bebidas</option>
 	</select>
-     </div>
-
-    <div class="campo-add-itens img-produto">
-       <label for="add-prod-img">Imagem do Produto</label>
-       <input type="file" id="add-prod-img" name="add-prod-img"> 
      </div>
 
         <div class="campo-add-itens">
@@ -66,7 +61,7 @@
      </div>
 
     <div class="campo-add-itens">
-	<button onclick="pegaInfos()">Cadastrar Produto</button>
+	<button onclick="cadastrarItem()">Cadastrar Produto</button>
     </div>
 
    </div>
@@ -76,7 +71,7 @@
 </section>
 
 
-      <main>
+      <main id="produtos-salvos">
 
         <a href="#add-itens">
         <div class="cards card-add">
