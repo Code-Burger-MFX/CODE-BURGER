@@ -7,11 +7,14 @@ function cadastrarItem() {
 	var descricaoProd = document.getElementById('add-prod-descricao').value;
 	var categoriaProd = document.getElementById('add-prod-categoria').value;
 	
-	var valorNumber = Number(valorProd)
+	var valorNumber = Number(valorProd);
 	
+	var valorEmReal = parseFloat(valorNumber).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+	
+
 	var produtosCadastrado = {
 		nome : nomeProd,
-		valor : valorNumber,
+		valor : valorEmReal,
 		descricao : descricaoProd,
 		categoria : categoriaProd
 	}
@@ -23,6 +26,8 @@ function cadastrarItem() {
 				if( categoriaProd !== 'notSelect'){
 					
 					var produtosString =  JSON.stringify(produtosCadastrado);
+
+					window.location.href = 'produtos.html';
 
                     return localStorage.setItem(localStorage.length + 1, produtosString);
 					
@@ -48,7 +53,7 @@ function cadastrarItem() {
 
 
 
-function itenSalvo() {
+function itenSalvoProdutos() {
 
     let produtosExibir = []
     
@@ -89,4 +94,7 @@ function itenSalvo() {
 
 
 
-window.onload = itenSalvo();
+window.onload = itenSalvoProdutos();
+
+
+
