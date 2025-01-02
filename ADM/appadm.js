@@ -1,5 +1,5 @@
 
-
+// cadastrar no localStorage //
 function cadastrarItem() {
 	
 	var nomeProd = document.getElementById('add-prod-name').value;
@@ -47,12 +47,11 @@ function cadastrarItem() {
 		alert('Adicionar um nome para o produto!')
 	}
 
-
 }
 
 
 
-
+// exibir produtos cadastrados para o adm //
 function itenSalvoProdutos() {
 
     let produtosExibir = []

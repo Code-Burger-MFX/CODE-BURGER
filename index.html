@@ -45,21 +45,24 @@
 
 
     <div class="header-login" id="menu">
-      <h6>Menu</h6>
-      <img src="./imgs/home/Vector-more.png" id="btn-menu-rotatorio" alt="icone de mais informação"> 
-    </div>
-   
-    <div class="menu-pequeno">
 
+      <h6>Menu</h6>
+      <img src="./imgs/home/Vector-more.png" id="btn-menu-rotatorio" alt="icone de mais informação">
+       
+    </div>
+
+    <div class="menu-pequeno">
     </div>
 
 
     <div class="carrinho-oculto hidded">
 
-   <div id="ffundo"></div>
+      <div class="logado">        
+        <a href="./Login-Cadastro/login.html">Login</a>
+      </div>
 
-  <a href="./Login-Cadastro/login.html">Login</a>
-	<br>
+
+	    <br>
 
 
       <div class="menu-pequeno">
@@ -81,6 +84,21 @@
         </a>
      </div>
 
+     <div id="itens-add-carrinho">
+      <!-- 
+        items adiconados ao carrinho
+      -->
+
+      <div class="cards-carrinho">
+        <img src="./imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards-carrinhos">
+        <h3>Hambúrguer</h3>
+        <button class="mais-item"></button>
+        <span>1</span>
+        <button></button>
+      </div>
+
+     </div>
+
     </div>
 
   </header>
@@ -97,23 +115,6 @@
 
 	    <h2>Hambúrguers</h2>
       <div id="cards-hbs" class="cardapio-haburgers">
-
-        <!--
-        <div class="cards">
-          <img src="./imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
-          <h3>Hambúrguer</h3>
-          <div class="descricao-cards">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla quidem molestias veniam nostrum
-              quam quia deserunt voluptatum repellat nihil, maxime quaerat odit quo ducimus unde qui, natus ipsam iure.
-            </p>
-          </div>
-          <div class="btns-cards">
-            <button>R$ 20,00</button>
-            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
-          </div>
-        </div>
-      -->
-
       </div>
 
 
@@ -132,12 +133,8 @@
 
       <h2>Sobremesas</h2>
       <div id="cards-sobs" class="cardapio-sobremesas">
-
-
-   
       </div>
  
-
 
     </div>
 
@@ -179,6 +176,7 @@
   </footer>
 
   <script src="apphome.js"></script>
+  <script src="./Login-Cadastro/login.js"></script>
 </body>
 
 </html>
