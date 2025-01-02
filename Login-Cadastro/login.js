@@ -16,12 +16,15 @@ function logar() {
                 
                 sessionStorage.setItem("Logado", "Admin");
                 showAlert('Logado com Sucesso!', 30000);
-                return setTimeout( window.location.href = "../ADM/adm.html", 30000);
+
+                return setTimeout(function() {
+                    window.location.href = "../ADM/adm.html"; 
+                }, 3000);
                 
-            }
+            } 
 
             sessionStorage.setItem("Logado", "Usuario");
-            showAlert('Logado com Sucesso!', 3000);
+            showAlert('Logado com Sucesso!', 30000);
             return setTimeout(function() {
                 window.location.href = "../index.html"; 
             }, 3000);

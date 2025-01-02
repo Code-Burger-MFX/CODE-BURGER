@@ -32,9 +32,9 @@
    header .carrinho-oculto a {
 	   font-size: 20px;
    }
-   #ffundo {
-   	right:0;
-   }
+   #itens-add-carrinho {
+      max-height: 200px;
+  }  
    main img {
 	   width: 300px;
    }
@@ -190,10 +190,9 @@
      header .menu-pequeno a{
     	font-size: 200px;
    }
-
-   #ffundo {
-  	right: 7px;
-   }
+   #itens-add-carrinho {
+      max-height: 200px;
+  }  
    main img {
 	width: 350px;
    }

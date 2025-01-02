@@ -31,7 +31,6 @@ function hambugersHome() {
        produtosExibir.push(prodObj);
        
        let template = `
-   
        <div class="cards">
        
          <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
@@ -43,10 +42,9 @@ function hambugersHome() {
 
          <div class="btns-cards">
             <button>${prodObj.valor}</button>
-            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="add-item-list"></button>
           </div>
-       </div>
-       `;
+       </div>`;
        
        if(prodObj.categoria == 'hb') {
         document.querySelector('#cards-hbs').innerHTML += template;
@@ -175,7 +173,6 @@ function sobsHome() {
 
 
 
-
 // atualiza a pagina //
 window.onload = () => {
   hambugersHome();
@@ -183,21 +180,6 @@ window.onload = () => {
   bebsHome();
   sobsHome();
 }
-
-
-// add item no carrinho //
-
-let carrinho = document.querySelector('.carrinho');
-let carrinhoItens = document.querySelector('.carrinho-itens');
-
-
-
-
-
-
-
-
-
 
 
 
@@ -229,3 +211,48 @@ logout.addEventListener('click', () => {
   window.location.href = './Login-Cadastro/login.html';
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+// contador de cards de cada itens //
+var contagemSpan = document.querySelectorAll('.cont-span');
+var btnsMais = document.querySelectorAll('.mais-item');
+var btnMenos = document.querySelectorAll('.menos-item');
+
+
+contagemSpan = [];
+
+
+// add + 1 item //
+  btnsMais.forEach((btnMais, index) => {
+     
+      contagemSpan[index] = 1;
+    
+      btnMais.addEventListener('click', () => {
+
+        contagemSpan[index]++;
+        document.querySelectorAll('.cont-span')[index].textContent = contagemSpan[index];
+    });
+});
+
+
+// remove - 1 item //
+btnMenos.forEach((btnMenos, index) => {
+
+  btnMenos.addEventListener('click', () => {
+
+    if(contagemSpan[index] > 1) {
+      contagemSpan[index]--;
+      document.querySelectorAll('.cont-span')[index].textContent = contagemSpan[index];
+    }
+  });
+});
