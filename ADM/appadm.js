@@ -97,3 +97,11 @@ window.onload = itenSalvoProdutos();
 
 
 
+
+
+let logout = document.getElementById('logout');
+
+logout.addEventListener('click', () => {
+  sessionStorage.removeItem('Logado');
+  window.location.href = './Login-Cadastro/login.html';
+});

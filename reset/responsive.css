@@ -32,7 +32,7 @@
    header .carrinho-oculto a {
 	   font-size: 20px;
    }
-   #itens-add-carrinho {
+   #list-add-carrinho {
       max-height: 200px;
   }  
    main img {
@@ -190,7 +190,7 @@
      header .menu-pequeno a{
     	font-size: 200px;
    }
-   #itens-add-carrinho {
+   #list-add-carrinho {
       max-height: 200px;
   }  
    main img {

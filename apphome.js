@@ -31,7 +31,7 @@ function hambugersHome() {
        produtosExibir.push(prodObj);
        
        let template = `
-       <div class="cards">
+       <div class="cards  add-item-carrinho">
        
          <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
          <h3>${prodObj.nome}</h3>
@@ -42,7 +42,7 @@ function hambugersHome() {
 
          <div class="btns-cards">
             <button>${prodObj.valor}</button>
-            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="add-item-list"></button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
           </div>
        </div>`;
        
@@ -69,22 +69,20 @@ function acompanhamentoHome() {
       produtosExibir.push(prodObj);
       
       let template = `
-  
-      <div class="cards">
-      
-        <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
-        <h3>${prodObj.nome}</h3>
+       <div class="cards  add-item-carrinho">
+       
+         <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+         <h3>${prodObj.nome}</h3>
 
-        <div class="descricao-cards">
-          <p>${prodObj.descricao}</p>
-        </div>
-
-        <div class="btns-cards">
-           <button>${prodObj.valor}</button>
-           <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
+         <div class="descricao-cards">
+           <p>${prodObj.descricao}</p>
          </div>
-      </div>
-      `;
+
+         <div class="btns-cards">
+            <button>${prodObj.valor}</button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+          </div>
+       </div>`;
 
       if(prodObj.categoria == 'comp') {
        document.querySelector('#cards-frits').innerHTML += template;
@@ -109,22 +107,20 @@ function bebsHome() {
       produtosExibir.push(prodObj);
       
       let template = `
-  
-      <div class="cards">
-      
-        <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
-        <h3>${prodObj.nome}</h3>
+       <div class="cards  add-item-carrinho">
+       
+         <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+         <h3>${prodObj.nome}</h3>
 
-        <div class="descricao-cards">
-          <p>${prodObj.descricao}</p>
-        </div>
-
-        <div class="btns-cards">
-           <button>${prodObj.valor}</button>
-           <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
+         <div class="descricao-cards">
+           <p>${prodObj.descricao}</p>
          </div>
-      </div>
-      `;
+
+         <div class="btns-cards">
+            <button>${prodObj.valor}</button>
+            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+          </div>
+       </div>`;
 
       if(prodObj.categoria == 'bebs') {
         document.querySelector('#cards-bebs').innerHTML += template;
@@ -174,14 +170,12 @@ function sobsHome() {
 
 
 // atualiza a pagina //
-window.onload = () => {
+window.onchange = () => {
   hambugersHome();
   acompanhamentoHome();
   bebsHome();
   sobsHome();
 }
-
-
 
   
   // user, adm ou se ninguem estiver logado // 
@@ -194,13 +188,12 @@ if(logado == 'Admin') {
 }  else if(logado == 'Usuario') {
 
   document.querySelector('.logado').innerHTML = 
-  `<a href="#">Usuario 1</a>  <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
+  `<a href="./cliente/carrinho-cliente.html">Usuario 1</a>  <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
 } else {
 
   document.querySelector('.logado').innerHTML = 
   `<a href="./Login-Cadastro/login.html">Login</a>`;
 }
-
 
 
 // logout //
@@ -216,43 +209,53 @@ logout.addEventListener('click', () => {
 
 
 
+// add itens no carrinho //
+
+var listaCarrinho = document.querySelector('#list-add-carrinho');
+var cadaItem = document.querySelectorAll('.add-item-carrinho');
+var btnsAdd = document.querySelectorAll('.btn-item-list');
 
 
 
+btnsAdd.forEach((btnAdd, index) => {
 
+  btnAdd.addEventListener('click', () => {
 
+    let imgItem = document.querySelectorAll('.produtos .imgs-cards')[index].src;
+    let nomeItem = document.querySelectorAll('.produtos h3')[index].textContent;
 
+    let template =`
+      <div class="cards-carrinho">
+        <img src="${imgItem}" class="imgs-cards-carrinhos">
+        <h3>${nomeItem}</h3>
+        <button class="menos-item"></button>
+        <span class="cont-span">1</span>
+        <button class="mais-item"></button>
+      </div>`;
 
-// contador de cards de cada itens //
-var contagemSpan = document.querySelectorAll('.cont-span');
-var btnsMais = document.querySelectorAll('.mais-item');
-var btnMenos = document.querySelectorAll('.menos-item');
+   listaCarrinho.innerHTML += template;
+   
 
-
-contagemSpan = [];
-
-
-// add + 1 item //
-  btnsMais.forEach((btnMais, index) => {
-     
-      contagemSpan[index] = 1;
-    
-      btnMais.addEventListener('click', () => {
-
-        contagemSpan[index]++;
-        document.querySelectorAll('.cont-span')[index].textContent = contagemSpan[index];
-    });
-});
-
-
-// remove - 1 item //
-btnMenos.forEach((btnMenos, index) => {
-
-  btnMenos.addEventListener('click', () => {
-
-    if(contagemSpan[index] > 1) {
-      contagemSpan[index]--;
-      document.querySelectorAll('.cont-span')[index].textContent = contagemSpan[index];
-    }
   });
+
 });
+
+
+
+  var btnsMais = document.querySelectorAll('.mais-item');
+  var btnsMenos = document.querySelectorAll('.menos-item');
+  var contagemSpan = document.querySelectorAll('.cont-span');
+
+  btnsMais.forEach((btnMais, index) => {
+    btnMais.addEventListener('click', () => {
+      contagemSpan[index].textContent = parseInt(contagemSpan[index].textContent) + 1;
+    });
+  });
+
+  btnsMenos.forEach((btnMenos, index) => {
+    btnMenos.addEventListener('click', () => {
+      if (parseInt(contagemSpan[index].textContent) > 1) {
+        contagemSpan[index].textContent = parseInt(contagemSpan[index].textContent) - 1;
+      }
+    });
+  });

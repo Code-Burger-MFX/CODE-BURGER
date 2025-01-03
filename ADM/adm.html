@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imgs/icons/hamburgue-logo.png">
     <title>Pagina Administrador</title>
     <link rel="stylesheet" href="adm.css">
     <link rel="stylesheet" href="../reset/reste.css">
+    <link rel="stylesheet" href="../reset/responsive.css">
 </head>
 <body>
     
 
     <header>
         <nav class="menu">
-          <div class="logo">
-            <a href="../index.html"><img src="../imgs/hamburgue-logo.png" alt="logo" /></a>
-            <h1>< CODE BURGER /></h1>
-        </div>
-        
-    </nav>
-    <h2>Bem vindo Username do adm</h2>
-      </header>
+            <div class="logo">
+              <a href="../index.html"><img src="../imgs/icons/hamburgue-logo.png" alt="logo" />
+              <h1>< CODE BURGER /></h1>
+            </a>
+            </div>
+          </nav>
+    </header>
+
+    
+    <a href="../Login-Cadastro/login.html" id="logout" class="btns-direction"><h6>< SAIR ></h6></a>
+    
+    <a href="../index.html" id="btn-site" class="btns-direction"><h6>< SITE ></h6></a>
 
 
-<a href="../Login-Cadastro/login.html" id="btn-voltar-adm"><h6> < SAIR >  </h6></a>
+    
+    <main>
 
-<a href="../index.html" id="btn-sair-adm"><h6> < SITE >  </h6></a>
+    <h2>Bem vindo(a) <span>ADM</span></h2>
 
 
-
-<main >
     <div id="caixa-conteudo"> 
         
-        
+    
         <div class="menu-adm">
-            <img src="../imgs/adm/acompanhamento pedido.png" alt="">
+            <img src="../imgs/adm/acompanhamento pedido.png">
             <p> Acompanhamento de pedido</p>
         </div>
+
        
-	<a href="./produtos/produtos.html"> 
+	    <a href="./produtos/produtos.html"> 
         <div class="menu-adm">
-            <img src="../imgs/adm/cadastro de produtos.png" alt="">
+            <img src="../imgs/adm/cadastro de produtos.png">
             <p>Cadastro de produtos</p>
         </div>
         </a>
+       
         <div class="menu-adm">
-            <img src="../imgs/adm/central de clientes.png" alt="">
+            <img src="../imgs/adm/central de clientes.png">
             <p>Central de Clientes</p>
         </div>
         
         <div class="menu-adm">
-            <img src="../imgs/adm/informaçoes da loja.png" alt="">
+            <img src="../imgs/adm/informaçoes da loja.png">
             <p>Informações da Loja</p>
         </div>
         
@@ -58,7 +65,6 @@
 
 
 
-    
-    
+    <script src="./appadm.js"></script>
 </body>
 </html>

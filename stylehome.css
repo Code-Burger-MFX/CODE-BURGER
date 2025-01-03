@@ -75,7 +75,7 @@ html {
  .carrinho-oculto {
      width: 280px;
      background-color: #726C6C;
-     max-height: 500px;
+     max-height: 550px;
      position: absolute;
      right: 0;
      top: 0;
@@ -177,13 +177,43 @@ html {
     font-weight: bold;
 }
 
-#itens-add-carrinho {
+#list-add-carrinho {
     margin-top: 10px;
     max-height: 350px;
     height: 50%;
-    overflow-y: auto;
+    overflow: auto;
 }
 
+.btns-carrinho {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    gap: 10px;
+}
+
+.btns-carrinho button {
+    width: 100px;
+    height: 40px;
+    background-color: #42fd00;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.btns-carrinho button:hover {
+    background-color: black;
+    color: #42fd00;
+}
+
+.btns-carrinho button:active {
+    transform: translate(0, 5px);
+}
 
 
 
@@ -240,7 +270,8 @@ html {
  
  .produtos h2 {
      text-align: center;
-     margin: 100px;
+     margin: 50px;
+     padding: 100px;
  }
  
  .cards {

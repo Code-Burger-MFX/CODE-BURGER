@@ -26,19 +26,19 @@
 
     <div class="direcao-index">
 
-      <a href="#cards-hbs">
+      <a href="#hamburger-index">
         <h6>Hambúrguers</h6>
       </a>
 
-      <a href="#cards-frits">
+      <a href="#fritas-index">
         <h6>Acompanhamentos</h6>
       </a>
 
-      <a href="#cards-bebs">
+      <a href="#bebidas-index">
         <h6>Bebidas</h6>
       </a>
 
-      <a href="#cards-sobs">
+      <a href="#sobremesa-index">
         <h6>Sobremesas</h6>
       </a>
     </div>
@@ -84,7 +84,7 @@
         </a>
      </div>
 
-     <div id="itens-add-carrinho">
+     <div id="list-add-carrinho">
       <!-- 
         items adiconados ao carrinho
       -->
@@ -96,6 +96,11 @@
       </div>
 
 
+     </div>
+
+     <div class="btns-carrinho">
+       <button id="btn-carrinho" disabled>Valor</button>
+       <button id="btn-finalizar">Finalizar</button>
      </div>
 
     </div>
@@ -112,25 +117,54 @@
 
     <div class="produtos">
 
-	    <h2>Hambúrguers</h2>
+
+	    <h2 id="hamburger-index">Hambúrguers</h2>
       <div id="cards-hbs" class="cardapio-haburgers">
+
+        <div class="cards add-item-carrinho" >
+          <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+          <h3>asdasd</h3>
+          <div class="descricao-cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam itaque delectus? Temporibus asperiores distinctio nesciunt dolorem repellat itaque minima aperiam eos voluptatem ex exercitationem, consequatur autem natus, optio aspernatur?</p>
+          </div>
+          <div class="btns-cards">
+             <button>R$ 102,00</button>
+             <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+           </div>
+        </div>
+
+
+        <div class="cards list-item-carrinho" >
+          <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+          <h3>asd</h3>
+          <div class="descricao-cards">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam itaque delectus? Temporibus asperiores distinctio nesciunt dolorem repellat itaque minima aperiam eos voluptatem ex exercitationem, consequatur autem natus, optio aspernatur?</p>
+          </div>
+          <div class="btns-cards">
+             <button>R$ 102,00</button>
+             <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+           </div>
+        </div>
+
+
+
       </div>
 
 
 
-      <h2>Fritas e Acompanhamentos</h2>
+      <h2 id="fritas-index">Fritas e Acompanhamentos</h2>
       <div id="cards-frits" class="cardapio-fritas">
       </div>
 
 
 
-      <h2>Bebidas</h2>
+      <h2 id="bebidas-index">Bebidas</h2>
       <div id="cards-bebs" class="cardapio-bebidas">
       </div>
 
 
 
-      <h2>Sobremesas</h2>
+      <h2 id="sobremesa-index">Sobremesas</h2>
       <div id="cards-sobs" class="cardapio-sobremesas">
       </div>
  
