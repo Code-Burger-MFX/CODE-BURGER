@@ -1,35 +1,73 @@
-
-
 body {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.menu {
+header .menu a {
   display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+#info-pedidos {
+  padding: 30px;
+  width: 100%;
+  gap: 50px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3rem;
-  height: 50px;
 }
 
-.logo {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
 
-.logo img {
-  width: 60px;
-  height: 50px;
-}
-
-h2 {
+#info-pedidos h2 {
+  color: #42fd00;
+  margin-bottom: 30px;
+  margin-left: 50px;
   font-size: 50px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
 }
+
+
+#info-pedidos p {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+
+#info-pedidos h3 {
+  color: #42fd00;
+  font-size: 25px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.valores {
+  color: #42fd00;
+}
+
+#resumo-pedido {
+  display: flex;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+
+
+.resumo-valores {
+  margin-top: 65px;
+  margin-bottom: 0;
+}
+
+.resumo-valores p {
+  
+  margin-bottom: 15px;
+}
+
+
 
 .main-historico {
   background-color: black;
@@ -82,13 +120,6 @@ hr {
   display: flex;
 }
 
-.numero-pedido {
-  width: 0%;
-  height: 0%;
-  margin-top: 15px;
-  margin-left: 25px;
-}
-
 .pedido-1 {
   display: flex;
   align-items: center;
@@ -135,81 +166,12 @@ hr {
   margin-left: 80px;
 }
 
-.section-txt {
-  display: flex;
-  gap: 550px;
-}
 
-.section-txt h2 {
-  color: #42fd00;
-  margin-top: 0;
-  margin-bottom: 30px;
-  margin-left: 150px;
-}
-
-.section-txt p {
-  text-align: center;
-  margin-bottom: 30px;
-  margin-left: 150px;
-}
-
-
-.carrinho {
-  margin-top: 45px;
-  
-}
-
-.resumo-pedido {
- 
-  width: 500px;
-  height: 200px;
-  display: flex;
-  margin-top: 50px;
-  margin-right: 50px;
-}
-
-.txt-resumo {
-  display: flex;
-  flex-direction: column;
- 
-}
-
-.txt-resumo-1 h3 {
-  
-  color: #42fd00;
-  font-size: 25px;
-  margin-bottom: 25px;
-  margin-top: 15px;
-  margin-left: px;
-  
-}
-
-.txt-resumo-1 p {
-  margin-left: 0;
-  margin-right: 80px;
-  margin-bottom: 15px;
-
-}
-
-.txt-resumo-2  {
-  margin-top: 65px;
-  margin-bottom: 0;
-}
-
-.txt-resumo-2 p {
-  
-  margin-bottom: 15px;
-}
-
-.color-green {
-  color: #42fd00;
-}
 
 .pedidos {
   display: flex;
   flex-direction: column;
-  gap: 35px;
- 
+  gap: 35px; 
   margin-top: 15px;
   width: 800px;
   height: 400px;
@@ -262,10 +224,6 @@ hr {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-}
-
-.valor-total {
-
 }
 
 .quantidade {
