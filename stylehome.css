@@ -215,6 +215,9 @@ html {
     transform: translate(0, 5px);
 }
 
+.btns-carrinho {
+    display: none;
+}
 
 
  

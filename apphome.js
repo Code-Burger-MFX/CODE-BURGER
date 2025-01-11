@@ -12,6 +12,46 @@ btnMenu.addEventListener('click', () => {
 });
 
 
+// atualiza a pagina //
+window.onload = () => {
+  hambugersHome();
+  acompanhamentoHome();
+  bebsHome();
+  sobsHome();
+}
+
+  
+  // user, adm ou se ninguem estiver logado // 
+let logado = sessionStorage.getItem('Logado');
+
+if(logado == 'Admin') {
+
+  document.querySelector('.logado').innerHTML = 
+  `<a href="../ADM/adm.html">Admin</a> <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
+}  else if(logado == 'Usuario') {
+
+  document.querySelector('.logado').innerHTML = 
+  `<a href="./cliente/carrinho-cliente.html">Usuario 1</a>  <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
+  document.querySelector('.btns-carrinho').style.display = "flex";
+} else {
+
+  document.querySelector('.logado').innerHTML = 
+  `<a href="./Login-Cadastro/login.html">Login</a>`;
+}
+
+
+// logout //
+let logout = document.getElementById('logout');
+logout.addEventListener('click', () => {
+  sessionStorage.removeItem('Logado');
+  window.location.href = './Login-Cadastro/login.html';
+});
+
+
+
+
+
+
 
 
 // itens adicionados pelo adm no localStorage //
@@ -42,13 +82,14 @@ function hambugersHome() {
 
          <div class="btns-cards">
             <button>${prodObj.valor}</button>
-            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+            <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
           </div>
        </div>`;
        
-       if(prodObj.categoria == 'hb') {
-        document.querySelector('#cards-hbs').innerHTML += template;
+       if(prodObj.categoria == 'Hamburguer') {
+        document.querySelector('.cardapio-haburgers').innerHTML += template;
       } 
+      
    }
 
 }
@@ -80,11 +121,11 @@ function acompanhamentoHome() {
 
          <div class="btns-cards">
             <button>${prodObj.valor}</button>
-            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+            <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
           </div>
        </div>`;
 
-      if(prodObj.categoria == 'comp') {
+      if(prodObj.categoria == 'Acompanhamento') {
        document.querySelector('#cards-frits').innerHTML += template;
       } 
     }
@@ -118,11 +159,11 @@ function bebsHome() {
 
          <div class="btns-cards">
             <button>${prodObj.valor}</button>
-            <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+            <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
           </div>
        </div>`;
 
-      if(prodObj.categoria == 'bebs') {
+      if(prodObj.categoria == 'Bebida') {
         document.querySelector('#cards-bebs').innerHTML += template;
       }
    }
@@ -156,12 +197,12 @@ function sobsHome() {
 
         <div class="btns-cards">
            <button>${prodObj.valor}</button>
-           <button><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
+           <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
          </div>
       </div>
       `;
 
-      if(prodObj.categoria == 'sobs') {
+      if(prodObj.categoria == 'Sobremesa') {
         document.querySelector('#cards-sobs').innerHTML += template;
       }
    }
@@ -169,93 +210,34 @@ function sobsHome() {
 
 
 
-// atualiza a pagina //
-window.onchange = () => {
-  hambugersHome();
-  acompanhamentoHome();
-  bebsHome();
-  sobsHome();
-}
-
-  
-  // user, adm ou se ninguem estiver logado // 
-let logado = sessionStorage.getItem('Logado');
-
-if(logado == 'Admin') {
-
-  document.querySelector('.logado').innerHTML = 
-  `<a href="../ADM/adm.html">Admin</a> <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
-}  else if(logado == 'Usuario') {
-
-  document.querySelector('.logado').innerHTML = 
-  `<a href="./cliente/carrinho-cliente.html">Usuario 1</a>  <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
-} else {
-
-  document.querySelector('.logado').innerHTML = 
-  `<a href="./Login-Cadastro/login.html">Login</a>`;
-}
-
-
-// logout //
-let logout = document.getElementById('logout');
-
-logout.addEventListener('click', () => {
-  sessionStorage.removeItem('Logado');
-  window.location.href = './Login-Cadastro/login.html';
-});
 
 
 
 
-
-
-// add itens no carrinho //
-
+// // add itens no carrinho //
 var listaCarrinho = document.querySelector('#list-add-carrinho');
 var cadaItem = document.querySelectorAll('.add-item-carrinho');
 var btnsAdd = document.querySelectorAll('.btn-item-list');
 
+var carrinho = [];
+
+function addCarinho() {
+
+  let imgItem = './imgs/produtos/sobremesa.png';
+  let nomeItem = 'asd';
+
+  let template =`
+    <div class="cards-carrinho">
+      <img src="${imgItem}" class="imgs-cards-carrinhos">
+      <h3>${nomeItem}</h3>
+      <button class="menos-item"></button>
+      <span class="cont-span">1</span>
+      <button class="mais-item"></button>
+    </div>`;
+
+ listaCarrinho.innerHTML += template;
 
 
-btnsAdd.forEach((btnAdd, index) => {
-
-  btnAdd.addEventListener('click', () => {
-
-    let imgItem = document.querySelectorAll('.produtos .imgs-cards')[index].src;
-    let nomeItem = document.querySelectorAll('.produtos h3')[index].textContent;
-
-    let template =`
-      <div class="cards-carrinho">
-        <img src="${imgItem}" class="imgs-cards-carrinhos">
-        <h3>${nomeItem}</h3>
-        <button class="menos-item"></button>
-        <span class="cont-span">1</span>
-        <button class="mais-item"></button>
-      </div>`;
-
-   listaCarrinho.innerHTML += template;
-   
-
-  });
-
-});
+}
 
 
-
-  var btnsMais = document.querySelectorAll('.mais-item');
-  var btnsMenos = document.querySelectorAll('.menos-item');
-  var contagemSpan = document.querySelectorAll('.cont-span');
-
-  btnsMais.forEach((btnMais, index) => {
-    btnMais.addEventListener('click', () => {
-      contagemSpan[index].textContent = parseInt(contagemSpan[index].textContent) + 1;
-    });
-  });
-
-  btnsMenos.forEach((btnMenos, index) => {
-    btnMenos.addEventListener('click', () => {
-      if (parseInt(contagemSpan[index].textContent) > 1) {
-        contagemSpan[index].textContent = parseInt(contagemSpan[index].textContent) - 1;
-      }
-    });
-  });

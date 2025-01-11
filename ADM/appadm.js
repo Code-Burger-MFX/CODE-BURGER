@@ -70,7 +70,7 @@ function itenSalvoProdutos() {
         let template = `
     
         <div class="cards">
-        
+          <span class="categoria-card">${prodObj.categoria}</span>        
           <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
           <h3>${prodObj.nome}</h3>
           <div class="descricao-cards">
@@ -81,8 +81,7 @@ function itenSalvoProdutos() {
             <button>Editar</button>
             <button>Excluir</button>
           </div>$
-        </div>
-        `;
+        </div>`;
 
         
 		document.querySelector('#produtos-salvos').innerHTML += template;
@@ -99,8 +98,8 @@ window.onload = itenSalvoProdutos();
 
 
 
-let logout = document.getElementById('logout');
 
+let logout = document.getElementById('logout');
 logout.addEventListener('click', () => {
   sessionStorage.removeItem('Logado');
   window.location.href = './Login-Cadastro/login.html';

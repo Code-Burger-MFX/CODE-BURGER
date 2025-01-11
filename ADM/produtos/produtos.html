@@ -24,7 +24,7 @@
 <a href="../adm.html"><h6>< Voltar ></h6></a>
 
 
-  <section id="add-itens">
+<section id="add-itens">
 
  <div id="caixa-add-itens">
 
@@ -32,7 +32,6 @@
     <h2>Adicionar Produtos</h2>
     <a href="#close" class="close-add-itens"> X </a>
    </div>
-
 
    <div class="conteudo-add-itens">
    
@@ -46,48 +45,55 @@
        <input type="number" id="add-prod-valor" name="add-prod-valor"> 
      </div>
   
-     <div class="campo-add-itens">
+     <!-- <div class="campo-add-itens">
        <label for="add-prod-img">Imagem do Produto</label>
        <input type="file" id="add-prod-img" name="add-prod-img" accept="jpg"> 
+     </div> -->
+
+     <div class="campo-add-itens">
+        <label for="add-prod-categoria">Selecione uma Categoria</label>
+          <select id="add-prod-categoria" > 
+	          <option value="notSelect" selected disabled>Selecione uma categoria</option>
+	          <option value="Hamburguer">Hamburgers</option>
+	          <option value="Acompanhamento">Fritas</option>
+	          <option value="Bebida">Bebidas</option>
+	          <option value="Sobremesa">Sobremesas</option>
+	        </select>
      </div>
 
      <div class="campo-add-itens">
-	<select id="add-prod-categoria" > 
-	  <option value="notSelect" selected disabled>Selecione uma categoria</option>
-	  <option value="hb">Hamburgers</option>
-	  <option value="comp">Fritas</option>
-	  <option value="bebs">Bebidas</option>
-	  <option value="sobs">Sobremesas</option>
-	</select>
-     </div>
-
-        <div class="campo-add-itens">
        <label for="add-prod-descricao">Valor do Produto</label>
        <textarea type="text" id="add-prod-descricao" name="add-prod-descricao"> </textarea>
      </div>
 
-    <div class="campo-add-itens">
-	<button onclick="cadastrarItem()">Cadastrar Produto</button>
-    </div>
+     <div class="campo-add-itens">
+	      <button onclick="cadastrarItem()">Cadastrar Produto</button>
+     </div>
 
    </div>
   
-  </div>
+
+ </div>
+
+<!-- 
+  div para editar produtos!! aqui
+-->
 
 </section>
 
 
       <main id="produtos-salvos">
 
-        <a href="#add-itens">
+      <a href="#add-itens">
         <div class="cards card-add">
           <img src="../../imgs/icons/addproduto.png">
           <h5>Adicionar mais produto</h5>
         </div>
       </a>
-
 <!-- 
+
         <div class="cards">
+          <span class="categoria-card">Hamburgers</span>
           <img src="../.././imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
           <h3>Hambúrguer</h3>
 
@@ -99,7 +105,7 @@
             <button>Editar</button>
             <button>Excluir</button>
           </div>
-        </div> -->
+        </div>  -->
 
 
 
