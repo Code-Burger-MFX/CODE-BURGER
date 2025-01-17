@@ -50,13 +50,12 @@ function cadastrarItem() {
 }
 
 
+let produtosSalvos = []
+
 
 // exibir produtos cadastrados para o adm //
 function itenSalvoProdutos() {
-
-    let produtosExibir = []
     
-
     let prodQtd =  localStorage.length;
 
     for(i = 1; i <= prodQtd; i++) {
@@ -65,7 +64,7 @@ function itenSalvoProdutos() {
         
         let prodObj = JSON.parse(prodExibir);
 
-        produtosExibir.push(prodObj);
+        produtosSalvos.push(prodObj);
         
         let template = `
     
@@ -95,7 +94,11 @@ function itenSalvoProdutos() {
 window.onload = itenSalvoProdutos();
 
 
+function excluir() {
 
+	
+
+}
 
 
 
