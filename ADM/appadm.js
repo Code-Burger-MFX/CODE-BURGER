@@ -19,7 +19,6 @@ function cadastrarItem() {
 		categoria : categoriaProd
 	}
 
-
 	if( nomeProd.length >= 3 ){
 		 if( valorNumber !== 0){
 			if( descricaoProd.length >= 5){
@@ -29,7 +28,7 @@ function cadastrarItem() {
 
 					window.location.href = 'produtos.html';
 
-                    return localStorage.setItem(localStorage.length + 1, produtosString);
+                    return localStorage.setItem('Produto ' + (localStorage.length + 1), produtosString);
 					
 				} else {
 					alert('Adicionar uma categoria para o produto!')
@@ -50,20 +49,19 @@ function cadastrarItem() {
 }
 
 
-let produtosSalvos = []
+let produtosSalvos = [];
 
 
 // exibir produtos cadastrados para o adm //
 function itenSalvoProdutos() {
     
-    let prodQtd =  localStorage.length;
+    let prodQtd = localStorage.length;
 
     for(i = 1; i <= prodQtd; i++) {
-
-        let prodExibir = localStorage.getItem(i);
         
+        let prodExibir = localStorage.getItem('Produto ' + i);
         let prodObj = JSON.parse(prodExibir);
-
+		
         produtosSalvos.push(prodObj);
         
         let template = `
@@ -76,12 +74,18 @@ function itenSalvoProdutos() {
             <p>${prodObj.descricao}</p>
           </div>
 
-          <div class="btn-produtos">
-            <button>Editar</button>
-            <button>Excluir</button>
-          </div>$
-        </div>`;
+		   <div class="btn-produtos">
 
+            <a href="#edit-itens" class="link-edit">
+            <button>
+              Editar
+            </button>
+          </a>
+
+            <button class="link-exlui">${prodObj.valor}</button>
+          </div>
+
+        </div>`;
         
 		document.querySelector('#produtos-salvos').innerHTML += template;
 		
@@ -94,9 +98,7 @@ function itenSalvoProdutos() {
 window.onload = itenSalvoProdutos();
 
 
-function excluir() {
-
-	
+function excluirItemSalvo() {
 
 }
 

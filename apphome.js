@@ -14,10 +14,7 @@ btnMenu.addEventListener('click', () => {
 
 // atualiza a pagina //
 window.onload = () => {
-  hambugersHome();
-  acompanhamentoHome();
-  bebsHome();
-  sobsHome();
+  percorerItens();
 }
 
   
@@ -48,165 +45,56 @@ logout.addEventListener('click', () => {
 });
 
 
-
-
-
-
+let produtosExibir = [];
 
 
 // itens adicionados pelo adm no localStorage //
-function hambugersHome() {
-
-   let produtosExibir = []
-   
-
-   let prodQtd =  localStorage.length;
-
-   for(i = 1; i <= prodQtd; i++) {
-
-       let prodExibir = localStorage.getItem(i);
-       
-       let prodObj = JSON.parse(prodExibir);
-
-       produtosExibir.push(prodObj);
-       
-       let template = `
-       <div class="cards  add-item-carrinho">
-       
-         <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
-         <h3>${prodObj.nome}</h3>
-
-         <div class="descricao-cards">
-           <p>${prodObj.descricao}</p>
-         </div>
-
-         <div class="btns-cards">
-            <button>${prodObj.valor}</button>
-            <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
-          </div>
-       </div>`;
-       
-       if(prodObj.categoria == 'Hamburguer') {
-        document.querySelector('.cardapio-haburgers').innerHTML += template;
-      } 
-      
-   }
-
-}
-
-
-function acompanhamentoHome() {
-
-  let produtosExibir = []
+function percorerItens() {
   
-  let prodQtd =  localStorage.length;
+  let qtdList =  localStorage.length;
 
-  for(i = 1; i <= prodQtd; i++) {
+  const idProdList = 'Produto '; 
 
-      let prodExibir = localStorage.getItem(i);
-      
-      let prodObj = JSON.parse(prodExibir);
+  for(i = 1; i <= qtdList; i++) {
 
-      produtosExibir.push(prodObj);
-      
-      let template = `
-       <div class="cards  add-item-carrinho">
-       
-         <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
-         <h3>${prodObj.nome}</h3>
+    let prodExibir = localStorage.getItem(idProdList + i);
 
-         <div class="descricao-cards">
-           <p>${prodObj.descricao}</p>
-         </div>
+    let prodObj = JSON.parse(prodExibir);
 
-         <div class="btns-cards">
-            <button>${prodObj.valor}</button>
-            <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
-          </div>
-       </div>`;
+    produtosExibir.push(prodObj);
 
-      if(prodObj.categoria == 'Acompanhamento') {
-       document.querySelector('#cards-frits').innerHTML += template;
+    let templateHome = `
+    <div class="cards  add-item-carrinho">
+    
+      <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+      <h3>${prodObj.nome}</h3>
+
+      <div class="descricao-cards">
+        <p>${prodObj.descricao}</p>
+        </div>
+        
+        <div class="btns-cards">
+        <button>${prodObj.valor}</button>
+        <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
+       </div>
+    </div>`;
+
+      if(prodObj.categoria === 'Hamburguer') {
+        document.querySelector('.cardapio-haburgers').innerHTML += templateHome;
+      } else if(prodObj.categoria === 'Acompanhamento') {
+       document.querySelector('#cards-frits').innerHTML += templateHome;
+      } else if(prodObj.categoria === 'Bebida') {
+        document.querySelector('#cards-bebs').innerHTML += templateHome;
+      } else if(prodObj.categoria === 'Sobremesa') {
+        document.querySelector('#cards-sobs').innerHTML += templateHome;
       } 
     }
 }
 
 
-function bebsHome() {
-
-  let produtosExibir = []
-  
-
-  let prodQtd =  localStorage.length;
-
-  for(i = 1; i <= prodQtd; i++) {
-
-      let prodExibir = localStorage.getItem(i);
-      
-      let prodObj = JSON.parse(prodExibir);
-
-      produtosExibir.push(prodObj);
-      
-      let template = `
-       <div class="cards  add-item-carrinho">
-       
-         <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
-         <h3>${prodObj.nome}</h3>
-
-         <div class="descricao-cards">
-           <p>${prodObj.descricao}</p>
-         </div>
-
-         <div class="btns-cards">
-            <button>${prodObj.valor}</button>
-            <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
-          </div>
-       </div>`;
-
-      if(prodObj.categoria == 'Bebida') {
-        document.querySelector('#cards-bebs').innerHTML += template;
-      }
-   }
-}
 
 
-function sobsHome() {
-
-  let produtosExibir = []
-
-  let prodQtd =  localStorage.length;
-
-  for(i = 1; i <= prodQtd; i++) {
-
-      let prodExibir = localStorage.getItem(i);
-      
-      let prodObj = JSON.parse(prodExibir);
-
-      produtosExibir.push(prodObj);
-      
-      let template = `
-  
-      <div class="cards">
-      
-        <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
-        <h3>${prodObj.nome}</h3>
-
-        <div class="descricao-cards">
-          <p>${prodObj.descricao}</p>
-        </div>
-
-        <div class="btns-cards">
-           <button>${prodObj.valor}</button>
-           <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos"></button>
-         </div>
-      </div>
-      `;
-
-      if(prodObj.categoria == 'Sobremesa') {
-        document.querySelector('#cards-sobs').innerHTML += template;
-      }
-   }
-}
+let produtosList = [];
 
 
 
