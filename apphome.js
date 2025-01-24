@@ -114,7 +114,7 @@ function addCarinho() {
   let imgItem = './imgs/produtos/sobremesa.png';
   let nomeItem = 'asd';
 
-  let template =`
+  let templateCarrinho =`
     <div class="cards-carrinho">
       <img src="${imgItem}" class="imgs-cards-carrinhos">
       <h3>${nomeItem}</h3>
@@ -123,7 +123,7 @@ function addCarinho() {
       <button class="mais-item"></button>
     </div>`;
 
- listaCarrinho.innerHTML += template;
+ listaCarrinho.innerHTML += templateCarrinho;
 
 
 }

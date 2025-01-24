@@ -54,42 +54,46 @@ let produtosSalvos = [];
 
 // exibir produtos cadastrados para o adm //
 function itenSalvoProdutos() {
-    
-    let prodQtd = localStorage.length;
+	
+	let prodQtd = localStorage.length;
+	for(i = 1; i <= prodQtd; i++) {
 
-    for(i = 1; i <= prodQtd; i++) {
-        
-        let prodExibir = localStorage.getItem('Produto ' + i);
-        let prodObj = JSON.parse(prodExibir);
+		let prodExibir = localStorage.getItem('Produto ' + i);
+
+		if (!prodExibir) {
+			continue;
+		}
+
+		let prodObj = JSON.parse(prodExibir);
+
+		produtosSalvos.push(prodObj); 
+
+		let template = `
+	
+		<div class="cards">
+		  <span class="categoria-card">${prodObj.categoria}</span>        
+		  <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+		  <h3>${prodObj.nome}</h3>
+		  <div class="descricao-cards">
+			<p>${prodObj.descricao}</p>
+		  </div>
+
+
+		  <div class="btn-produtos">
+
+			<a href="#edit-itens" class="link-edit">
+			<button>
+			  Editar
+			</button>
+		  </a>
+
+			<button class="link-exlui" onclick="exluirItem()">Excluir</button>
+		  </div>
+
+		</div>`;
 		
-        produtosSalvos.push(prodObj);
-        
-        let template = `
-    
-        <div class="cards">
-          <span class="categoria-card">${prodObj.categoria}</span>        
-          <img src="../../imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
-          <h3>${prodObj.nome}</h3>
-          <div class="descricao-cards">
-            <p>${prodObj.descricao}</p>
-          </div>
-
-		   <div class="btn-produtos">
-
-            <a href="#edit-itens" class="link-edit">
-            <button>
-              Editar
-            </button>
-          </a>
-
-            <button class="link-exlui">${prodObj.valor}</button>
-          </div>
-
-        </div>`;
-        
 		document.querySelector('#produtos-salvos').innerHTML += template;
-		
-    }
+	}
 
 }
 
@@ -98,7 +102,18 @@ function itenSalvoProdutos() {
 window.onload = itenSalvoProdutos();
 
 
-function excluirItemSalvo() {
+
+function exluirItem() {
+
+	  let excluir = document.querySelectorAll('.link-exlui');
+
+	  excluir.forEach((item, index) => { 
+		item.addEventListener('click', () => {
+			item.parentElement.parentElement.remove();
+			return localStorage.removeItem('Produto ' + (index + 1));	
+			   });
+			});
+
 
 }
 
