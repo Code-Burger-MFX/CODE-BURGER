@@ -22,11 +22,9 @@ window.onload = () => {
 let logado = sessionStorage.getItem('Logado');
 
 if(logado == 'Admin') {
-
   document.querySelector('.logado').innerHTML = 
   `<a href="../ADM/adm.html">Admin</a> <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
 }  else if(logado == 'Usuario') {
-
   document.querySelector('.logado').innerHTML = 
   `<a href="./cliente/carrinho-cliente.html">Usuario 1</a>  <h3><a href="./Login-Cadastro/login.html" id="logout">Sair</a></h3>`;
   document.querySelector('.btns-carrinho').style.display = "flex";
@@ -45,11 +43,12 @@ logout.addEventListener('click', () => {
 });
 
 
-let produtosExibir = [];
 
 
 // itens adicionados pelo adm no localStorage //
 function percorerItens() {
+
+  let produtosExibir = [];
   
   let qtdList =  localStorage.length;
 
@@ -94,38 +93,75 @@ function percorerItens() {
 
 
 
-let produtosList = [];
 
-
-
-
-
-
-
-// // add itens no carrinho //
+// add itens no carrinho //
 var listaCarrinho = document.querySelector('#list-add-carrinho');
 var cadaItem = document.querySelectorAll('.add-item-carrinho');
 var btnsAdd = document.querySelectorAll('.btn-item-list');
 
-var carrinho = [];
+
+let produtosList = [];
+
 
 function addCarinho() {
-
   let imgItem = './imgs/produtos/sobremesa.png';
-  let nomeItem = 'asd';
+  let nomeItem = event.target.closest('.add-item-carrinho').querySelector('h3').textContent;
 
-  let templateCarrinho =`
-    <div class="cards-carrinho">
-      <img src="${imgItem}" class="imgs-cards-carrinhos">
-      <h3>${nomeItem}</h3>
-      <button class="menos-item"></button>
-      <span class="cont-span">1</span>
-      <button class="mais-item"></button>
-    </div>`;
+  let itemExistente = Array.from(listaCarrinho.children).find(item => item.querySelector('h3').textContent === nomeItem);
 
- listaCarrinho.innerHTML += templateCarrinho;
+  if (itemExistente) {
+    let contSpan = itemExistente.querySelector('.cont-span');
+    let cont = parseInt(contSpan.textContent);
+    cont++;
+    contSpan.textContent = cont;
+  } else {
+    let templateCarrinho = `
+      <div class="cards-carrinho">
+        <img src="${imgItem}" class="imgs-cards-carrinhos">
+        <h3>${nomeItem}</h3>
+        <button class="menos-item"></button>
+        <span class="cont-span">1</span>
+        <button class="mais-item"></button>
+      </div>`;
+    listaCarrinho.innerHTML += templateCarrinho;
 
-
+    produtosList.push({nome: nomeItem, valor: valorItem});
+  }
 }
 
 
+// add ou remover itens no carrinho //
+listaCarrinho.addEventListener('click', (e) => {
+
+  if(e.target.classList.contains('mais-item')) {
+    let contSpan = e.target.previousElementSibling;
+    let cont = parseInt(contSpan.textContent);
+    cont++;
+    contSpan.textContent = cont;
+  } else if(e.target.classList.contains('menos-item')) {
+    let contSpan = e.target.nextElementSibling;
+    let cont = parseInt(contSpan.textContent);
+    cont--;
+    if(cont <= 0) {
+      e.target.parentElement.remove();
+    } else {
+      contSpan.textContent = cont;
+    }
+  }
+});
+
+
+
+
+// calculo do carrinho //
+function calcularCarrinho() {
+  let total = 0;
+
+  Array.from(listaCarrinho.children).forEach(item => {
+    let cont = parseInt(item.querySelector('.cont-span').textContent);
+    let valor = parseFloat(item.querySelector('.valor-item').textContent);
+    total += cont * valor;
+  });
+
+  return total;
+}
