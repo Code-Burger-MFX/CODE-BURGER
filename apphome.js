@@ -13,9 +13,7 @@ btnMenu.addEventListener('click', () => {
 
 
 // atualiza a pagina //
-window.onload = () => {
-  percorerItens();
-}
+window.onload = percorerItens();
 
   
   // user, adm ou se ninguem estiver logado // 
