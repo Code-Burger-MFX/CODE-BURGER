@@ -178,6 +178,19 @@ transform: translate(2px, 5px);
 }
 
 
+.campo-img {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.campo-add-itens #add-prod-img {
+    width: 10px;
+    border-radius: 50%;
+}
+
 
 
 .cards {

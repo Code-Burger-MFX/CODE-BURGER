@@ -18,64 +18,65 @@
           </a>
           </div>
         </nav>
-      </header>
+    </header>
 
 
 <a href="../adm.html"><h6>< Voltar ></h6></a>
 
 
-<section id="add-itens">
+    <section id="add-itens">
 
- <div id="caixa-add-itens">
+  <div id="caixa-add-itens">
 
-  <div class="menu-add-itens">
-    <h2>Adicionar Produtos</h2>
-    <a href="#close" class="close-add-itens"> X </a>
-   </div>
+    <div class="menu-add-itens">
+      <h2>Adicionar Produtos</h2>
+      <a href="#close" class="close-add-itens"> X </a>
+    </div>
 
-   <div class="conteudo-add-itens">
-   
-     <div class="campo-add-itens">
-       <label for="add-prod-name">Nome do Produto</label>
-       <input type="text" id="add-prod-name" name="add-prod-name"> 
-     </div>
+    <div class="conteudo-add-itens">
+    
+      <div class="campo-add-itens">
+        <label for="add-prod-name">Nome do Produto</label>
+        <input type="text" id="add-prod-name" name="add-prod-name"> 
+      </div>
 
-     <div class="campo-add-itens">
-       <label for="add-prod-valor">Valor do Produto</label>
-       <input type="number" id="add-prod-valor" name="add-prod-valor"> 
-     </div>
-  
-     <!-- <div class="campo-add-itens">
-       <label for="add-prod-img">Imagem do Produto</label>
-       <input type="file" id="add-prod-img" name="add-prod-img" accept="jpg"> 
-     </div> -->
+      <div class="campo-add-itens">
+        <label for="add-prod-valor">Valor do Produto</label>
+        <input type="number" id="add-prod-valor" name="add-prod-valor"> 
+      </div>
+    
+      <div class="campo-add-itens">
+        <label for="add-prod-img">Imagem do Produto</label>
+        <input type="file" id="add-prod-img" name="add-prod-img" accept="image/png" >
+        <img src="" alt="aa" id="add-prod-imagem">
+      </div>
 
-     <div class="campo-add-itens">
-        <label for="add-prod-categoria">Selecione uma Categoria</label>
-          <select id="add-prod-categoria" > 
-	          <option value="notSelect" selected disabled>Selecione uma categoria</option>
-	          <option value="Hamburguer">Hamburgers</option>
-	          <option value="Acompanhamento">Fritas</option>
-	          <option value="Bebida">Bebidas</option>
-	          <option value="Sobremesa">Sobremesas</option>
-	        </select>
-     </div>
+      <div class="campo-add-itens">
+          <label for="add-prod-categoria">Selecione uma Categoria</label>
+            <select id="add-prod-categoria" > 
+              <option value="notSelect" selected disabled>Selecione uma categoria</option>
+              <option value="Hamburguer">Hamburgers</option>
+              <option value="Acompanhamento">Fritas</option>
+              <option value="Bebida">Bebidas</option>
+              <option value="Sobremesa">Sobremesas</option>
+            </select>
+      </div>
 
-     <div class="campo-add-itens">
-       <label for="add-prod-descricao">Valor do Produto</label>
-       <textarea type="text" id="add-prod-descricao" name="add-prod-descricao"> </textarea>
-     </div>
+      <div class="campo-add-itens">
+        <label for="add-prod-descricao">Valor do Produto</label>
+        <textarea type="text" id="add-prod-descricao" name="add-prod-descricao"> </textarea>
+      </div>
 
-     <div class="campo-add-itens">
-	      <button onclick="cadastrarItem()">Cadastrar Produto</button>
-     </div>
+      <div class="campo-add-itens">
+          <button onclick="cadastrarItem()">Cadastrar Produto</button>
+      </div>
 
-   </div>
-  
+    </div>
+    
 
- </div>
+  </div>
 
-</section>
+    </section>
 
 
 <section id="edit-itens">
@@ -134,38 +135,12 @@
 
       <main id="produtos-salvos">
 
-      <a href="#add-itens">
-        <div class="cards card-add">
-          <img src="../../imgs/icons/addproduto.png">
-          <h5>Adicionar mais produto</h5>
-        </div>
-      </a>
-
-
-        <!-- <div class="cards">
-          <span class="categoria-card">Hamburgers</span>
-          <img src="../.././imgs/produtos/x-bacon1.png" alt="hambúrguer de bacon com queijo salada e tomate" class="imgs-cards">
-          <h3>Hambúrguer</h3>
-
-          <div class="descricao-cards">
-	     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sequi eos officia itaque enim velit cumque, rem nostrum architecto non quos debitis. Deserunt, laboriosam culpa exercitationem optio amet soluta reiciendis.</p>
+        <a href="#add-itens">
+          <div class="cards card-add">
+            <img src="../../imgs/icons/addproduto.png">
+            <h5>Adicionar mais produto</h5>
           </div>
-       
-          <div class="btn-produtos">
-
-            <a href="#edit-itens" class="link-edit">
-            <button>
-              Editar
-            </button>
-          </a>
-
-          <button class="link-exlui" onclick="exluirItem()">Excluir</button>
-          </div>
-          
-        </div>   -->
-
-
-
+        </a>
 
       </main>
 
