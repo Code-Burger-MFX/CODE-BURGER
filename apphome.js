@@ -71,7 +71,7 @@ function percorerItens() {
         </div>
         
         <div class="btns-cards">
-        <button>${prodObj.valor}</button>
+        <button>R$ ${prodObj.valor}</button>
         <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
        </div>
     </div>`;
@@ -100,7 +100,6 @@ var btnsAdd = document.querySelectorAll('.btn-item-list');
 
 let produtosList = [];
 
-
 function addCarinho() {
   let imgItem = './imgs/produtos/sobremesa.png';
   let nomeItem = event.target.closest('.add-item-carrinho').querySelector('h3').textContent;
@@ -123,13 +122,20 @@ function addCarinho() {
       </div>`;
     listaCarrinho.innerHTML += templateCarrinho;
 
-    produtosList.push({nome: nomeItem, valor: valorItem});
+    var qtdItem = document.querySelectorAll('.cont-span').textContent;
+
+    produtosList.push({img: imgItem, nome: nomeItem, quantidade: qtdItem});
+
   }
 }
+
+/// aqui
+
 
 
 // add ou remover itens no carrinho //
 listaCarrinho.addEventListener('click', (e) => {
+
 
   if(e.target.classList.contains('mais-item')) {
     let contSpan = e.target.previousElementSibling;
@@ -141,25 +147,20 @@ listaCarrinho.addEventListener('click', (e) => {
     let cont = parseInt(contSpan.textContent);
     cont--;
     if(cont <= 0) {
-      e.target.parentElement.remove();
+        if(confirm('Deseja realmente excluir este item?')) {
+          contSpan.textContent = 0;
+          e.target.parentElement.remove();
+        } else {
+          contSpan.textContent = 1;
+        }
     } else {
       contSpan.textContent = cont;
     }
+
   }
+  
 });
 
-
-
-
-// calculo do carrinho //
-function calcularCarrinho() {
-  let total = 0;
-
-  Array.from(listaCarrinho.children).forEach(item => {
-    let cont = parseInt(item.querySelector('.cont-span').textContent);
-    let valor = parseFloat(item.querySelector('.valor-item').textContent);
-    total += cont * valor;
-  });
-
-  return total;
+function salvarCarrinho() {
+  sessionStorage.setItem('Carrinho', JSON.stringify(produtosList));
 }

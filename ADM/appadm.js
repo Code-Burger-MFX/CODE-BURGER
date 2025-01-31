@@ -1,19 +1,37 @@
-// cadastrar no localStorage //
+// // cadastrar no localStorage //
+
+// var inputImagem = document.getElementById('add-prod-img');
+// var imgProduto = document.getElementById('img-prodadd-prod-imagem');
+
+// inputImagem.addEventListener('change', (e) => {
+// 	if(!(e.target && e.target.files && e.target.files.length > 0)) {
+// 		return;
+// 	}
+
+// 	var r = new FileReader();
+
+// 	r.onload = function() {
+
+// 		imgProduto.src = r.result;
+
+// 	}
+// 	r.readAsDataURL(e.target.files[0]);
+// });
+
 function cadastrarItem() {
 	
 	var nomeProd = document.getElementById('add-prod-name').value;
 	var valorProd = document.getElementById('add-prod-valor').value;
 	var descricaoProd = document.getElementById('add-prod-descricao').value;
 	var categoriaProd = document.getElementById('add-prod-categoria').value;
+	var imagemProd = document.getElementById('add-prod-imagem');
 	
-	var valorNumber = Number(valorProd);
-	
-	var valorEmReal = parseFloat(valorNumber).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 	
 
 	var produtosCadastrado = {
 		nome : nomeProd,
-		valor : valorEmReal,
+		valor : valorProd,
+		imagem : imagemProd,
 		descricao : descricaoProd,
 		categoria : categoriaProd
 	}
@@ -145,12 +163,11 @@ function editarItem() {
 			let prodExibir = localStorage.getItem('Produto ' + (index + 1));
 			let prodObj = JSON.parse(prodExibir);
 
-			var valorNumber = Number(prodObj.valor);
 
 		
 
 			document.getElementById('edit-prod-name').value = prodObj.nome;
-			document.getElementById('edit-prod-valor').value = valorNumber;
+			document.getElementById('edit-prod-valor').value = prodObj.valor;
 			document.getElementById('edit-prod-descricao').value = prodObj.descricao;
 			document.getElementById('edit-prod-categoria').value = prodObj.categoria;
 
@@ -178,10 +195,9 @@ function editarItem() {
 					document.getElementById('edit-prod-descricao').style.borderBottom = '3px solid green';
 				}
 
-				let valorReal = parseFloat(document.getElementById('edit-prod-valor').value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 				prodObj.nome = document.getElementById('edit-prod-name').value;
-				prodObj.valor = valorReal;
+				prodObj.valor = document.getElementById('edit-prod-valor').value;
 				prodObj.descricao = document.getElementById('edit-prod-descricao').value;
 				prodObj.categoria = document.getElementById('edit-prod-categoria').value;
 
@@ -206,3 +222,5 @@ logout.addEventListener('click', () => {
   sessionStorage.removeItem('Logado');
   window.location.href = './Login-Cadastro/login.html';
 });
+
+
