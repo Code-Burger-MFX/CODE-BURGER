@@ -95,9 +95,18 @@ flex-direction: column;
  margin: auto;
 }
 
-/* #add-itens .conteudo-add-itens .campo-add-itens.img-produto,  {
-height: 100px;
-} */
+#add-itens .conteudo-add-itens .campo-add-itens img {
+max-height: 150px;
+min-height: 100px;
+width: 100%;
+transition: transform 0.5s ease;
+margin-top: 20px;
+}
+
+#add-itens .conteudo-add-itens .campo-add-itens img:hover {
+    transform: scale(2);
+}
+
 
 #add-itens .conteudo-add-itens .campo-add-itens label, #edit-itens .conteudo-edit-itens label {
 color:#42fd00;

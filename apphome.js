@@ -60,10 +60,15 @@ function percorerItens() {
 
     produtosExibir.push(prodObj);
 
+    var imagemConvertida = prodObj.imagem;
+    var imagemConvertida = imagemConvertida.replace('C:\\fakepath\\', './imgs/produtos/');
+    prodObj.imagem = imagemConvertida;
+    
+
     let templateHome = `
     <div class="cards  add-item-carrinho">
     
-      <img src="./imgs/produtos/sobremesa.png" alt="pudim de chocolarte" class="imgs-cards">
+      <img src="${imagemConvertida}" alt="pudim de chocolarte" class="imgs-cards">
       <h3>${prodObj.nome}</h3>
 
       <div class="descricao-cards">
