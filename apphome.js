@@ -13,7 +13,6 @@ btnMenu.addEventListener('click', () => {
 
 
 // atualiza a pagina //
-window.onload = percorerItens();
 
   
   // user, adm ou se ninguem estiver logado // 
@@ -95,8 +94,6 @@ function percorerItens() {
 
 
 
-
-
 // add itens no carrinho //
 var listaCarrinho = document.querySelector('#list-add-carrinho');
 var cadaItem = document.querySelectorAll('.add-item-carrinho');
@@ -106,7 +103,8 @@ var btnsAdd = document.querySelectorAll('.btn-item-list');
 let produtosList = [];
 
 function addCarinho() {
-  let imgItem = './imgs/produtos/sobremesa.png';
+
+  let imgItem = event.target.closest('.add-item-carrinho').querySelector('.imgs-cards').src;
   let nomeItem = event.target.closest('.add-item-carrinho').querySelector('h3').textContent;
 
   let itemExistente = Array.from(listaCarrinho.children).find(item => item.querySelector('h3').textContent === nomeItem);
@@ -134,38 +132,74 @@ function addCarinho() {
   }
 }
 
-/// aqui
+
+function calcularTotal() {
+  let total = 0;
+  let itens = Array.from(listaCarrinho.children);
+
+  itens.forEach(item => {
+    let valor = parseFloat(item.querySelector('.btns-cards button').textContent.replace('R$ ', ''));
+    let quantidade = parseInt(item.querySelector('.cont-span').textContent);
+    total += valor * quantidade;
+  });
+
+  document.querySelector('#valor-list-carrinho').textContent = `R$ ${total.toFixed(2)}`;
+  return total;
+}
+
 
 
 
 // add ou remover itens no carrinho //
 listaCarrinho.addEventListener('click', (e) => {
 
-
   if(e.target.classList.contains('mais-item')) {
     let contSpan = e.target.previousElementSibling;
     let cont = parseInt(contSpan.textContent);
     cont++;
     contSpan.textContent = cont;
+    
   } else if(e.target.classList.contains('menos-item')) {
     let contSpan = e.target.nextElementSibling;
     let cont = parseInt(contSpan.textContent);
     cont--;
+
     if(cont <= 0) {
         if(confirm('Deseja realmente excluir este item?')) {
           contSpan.textContent = 0;
           e.target.parentElement.remove();
+        
         } else {
           contSpan.textContent = 1;
+
         }
     } else {
       contSpan.textContent = cont;
+
     }
 
   }
   
 });
 
-function salvarCarrinho() {
-  sessionStorage.setItem('Carrinho', JSON.stringify(produtosList));
+window.onload = () => {
+  percorerItens();
+
 }
+
+// calcularTotal //
+let btnCalcular = document.getElementById('btn-carrinho');
+btnCalcular.addEventListener('chenge', () => {
+  let total = calcularTotal();
+  document.querySelector('#valor-list-carrinho').textContent = `R$ ${total.toFixed(2)}`;
+  return total;
+});
+
+
+// finalizar compra //
+let btnFinalizar = document.getElementById('btn-finalizar');
+btnFinalizar.addEventListener('click', () => {
+  window.location.href = './cliente/carrinho-cliente.html';
+});
+
+
