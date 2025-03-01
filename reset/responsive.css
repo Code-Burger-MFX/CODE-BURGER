@@ -469,6 +469,9 @@
 	align-items: center;
 	width:100%;
    }
+   .descricao-cards {
+        font-size: 18px;
+   }
    .cards .btns-cards button {
         font-size: 15px;
    }

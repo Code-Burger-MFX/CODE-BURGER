@@ -10,6 +10,7 @@ header .menu a {
   gap: 20px;
   align-items: center;
   width: 100%;
+  text-decoration: none;
 }
   
 .btns-direction {

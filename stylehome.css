@@ -80,13 +80,11 @@ html {
      right: 0;
      top: 0;
      z-index: 10;
-     transition: all 5s ease-in-out;
+     transition: all 0.5s ease-in-out;
      border-radius: 0 0 0 20px;
      text-align: center;
      padding: 60px 25px 20px;
  }
- 
-
  
  .menu-pequeno {
      display: none;
@@ -146,7 +144,6 @@ html {
     transform: translate(0, 5px);
 }
 
-
 .cards-carrinho button.menos-item::before {
     content: "-";
     display: flex;
@@ -203,7 +200,7 @@ html {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .btns-carrinho button:hover {
@@ -218,14 +215,11 @@ html {
 .btns-carrinho {
     display: none;
 }
-
-
  
- .nav-menu-oculto h6 {
+.nav-menu-oculto h6 {
      margin: 10px;
      font-size: 15px;
  }
- 
  
  .hidded {
      display: none;
@@ -288,10 +282,13 @@ html {
      display: flex;
      flex-direction: column;
      align-items: center;
+     border: 2px solid #42fd00;
  }
  
  .imgs-cards {
-     width: 100%;
+    width: 80%;
+    height: 150px;
+    margin: 10px;
  }
  
  .cardapio-bebidas .imgs-cards {
@@ -408,7 +405,3 @@ html {
      display: flex;
      justify-content: space-evenly;
  }
- 
-
-
- 
