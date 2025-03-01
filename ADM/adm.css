@@ -57,6 +57,7 @@ main #caixa-conteudo {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  user-select: none;
 }
 
 main #caixa-conteudo .menu-adm {
@@ -68,10 +69,17 @@ main #caixa-conteudo .menu-adm {
   border: 2px solid black;
   border-radius: 20px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+main #caixa-conteudo a {
+  color: black;
+  text-decoration: none;
 }
 
 main #caixa-conteudo .menu-adm:hover {
   background-color: #cad8021e;
+  transform: scale(1.1);
 }
 
 main #caixa-conteudo  {

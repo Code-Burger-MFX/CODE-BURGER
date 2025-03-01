@@ -36,7 +36,7 @@ a h6:hover {
 }
 
 #add-itens, #edit-itens {
-    display:none;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -56,12 +56,13 @@ a h6:hover {
 
 #caixa-add-itens, #caixa-edit-itens {
     position: relative;
-    width: 650px;
-    height: 650px;
+    width: 550px;
+    height: 600px;
     background: #000;
     box-shadow: 0 0 25px 5px #42fd00;
     border-radius: 20px;
     padding: 10px 30px;
+    border: 2px solid #42fd00;
 }
 
 #add-itens:target, #edit-itens:target  {
@@ -83,30 +84,29 @@ text-decoration: underline 4px;
 }
 
 #add-itens .conteudo-add-itens, #edit-itens .conteudo-edit-itens {
- width: 100%;
-height: 550px;
-padding: 10px 60px;
-display: flex;
-flex-direction: column;
+    width: 100%;
+    height: 550px;
+    padding: 10px 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 #add-itens .conteudo-add-itens .campo-add-itens, #edit-itens .conteudo-edit-itens .campo-edit-itens {
- width: 80%;
+ width: 100%;
  margin: auto;
 }
 
 #add-itens .conteudo-add-itens .campo-add-itens img {
-max-height: 150px;
-min-height: 100px;
-width: 100%;
-transition: transform 0.5s ease;
-margin-top: 20px;
+    max-height: 100px;
+    min-height: 50px;
+    max-width: 100px;
+    min-width: 50px;
+    transition: transform 0.5s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-#add-itens .conteudo-add-itens .campo-add-itens img:hover {
-    transform: scale(2);
-}
-
 
 #add-itens .conteudo-add-itens .campo-add-itens label, #edit-itens .conteudo-edit-itens label {
 color:#42fd00;
@@ -123,6 +123,17 @@ padding: 2px 6px;
 border-radius: 20px;
 }
 
+#add-itens .conteudo-add-itens .campo-add-itens button {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 textarea {
 width: 100%;
 height: 80px;
@@ -133,28 +144,22 @@ color: orange;
 padding: 5px
 }
 
-/* #add-itens .conteudo-add-itens .campo-add-itens.img-produto input {
-height: 100px;
-font-size: 100%;
-text-align: center;
-padding: 35px 0;
-cursor: pointer;
-} */
-
 #add-itens .conteudo-add-itens .campo-add-itens button, #edit-itens .conteudo-edit-itens button {
 width: 100%;
 padding: 20px;
 border-radius: 20px;
 border: 2px solid #fdb600;
-background: rgba(4, 231, 23, 0.5) ;
-color: #fdb600;
+color: #42fd00;
+font-weight: bold;
+font-size: large;
 transition: transform 0.5s ease;
 cursor: pointer;
+background: #fdb60002;
 }
 
 #add-itens .conteudo-add-itens .campo-add-itens button:hover, #edit-itens .conteudo-edit-itens button:hover {
-    background: #fdb600;
-    color: #42fd00;
+    background: rgba(4, 231, 23, 0.2) ;
+    color: #fdb600;
 }
 
 #add-itens .conteudo-add-itens .campo-add-itens button:active, .close-add-itens:active, #edit-itens .conteudo-edit-itens button:active, .close-edit-itens:active {
@@ -209,7 +214,7 @@ transform: translate(2px, 5px);
     border: 2px solid black;
     border-radius: 20px;
     background: #000;
-    box-shadow: 0 0 25px 5px #42fd00 ;
+    box-shadow: 0 0 25px 5px #42fd00;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,6 +222,7 @@ transform: translate(2px, 5px);
     transition: all 1s ease-in-out;
     position: relative;
     user-select: none;
+    border: 2px solid #42fd00;
 }
 
 .categoria-card {
@@ -242,10 +248,10 @@ transform: translate(2px, 5px);
 
 .card-add:hover {
     img {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     h5 {
-	transform: scale(1.2);
+	transform: scale(1.1);
     }
   
 }
@@ -261,12 +267,13 @@ transform: translate(2px, 5px);
 }
 
 .cards img {
-    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
     max-height: 150px;
 }
 
 .cards h3 {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .cards .descricao-cards {

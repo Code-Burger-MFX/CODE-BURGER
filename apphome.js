@@ -14,6 +14,9 @@ btnMenu.addEventListener('click', () => {
 
 // atualiza a pagina //
 
+window.onload = () => {
+  percorerItens();
+}
   
   // user, adm ou se ninguem estiver logado // 
 let logado = sessionStorage.getItem('Logado');
@@ -182,10 +185,6 @@ listaCarrinho.addEventListener('click', (e) => {
   
 });
 
-window.onload = () => {
-  percorerItens();
-
-}
 
 // calcularTotal //
 let btnCalcular = document.getElementById('btn-carrinho');
