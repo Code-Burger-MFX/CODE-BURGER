@@ -65,6 +65,9 @@ function percorerItens() {
     var imagemConvertida = prodObj.imagem;
     var imagemConvertida = imagemConvertida.replace('C:\\fakepath\\', './imgs/produtos/');
     prodObj.imagem = imagemConvertida;
+
+
+    valorConvertido = parseFloat(prodObj.valor).toFixed(2);
     
 
     let templateHome = `
@@ -78,7 +81,7 @@ function percorerItens() {
         </div>
         
         <div class="btns-cards">
-        <button>R$ ${prodObj.valor}</button>
+        <button class="valor-item">R$ ${valorConvertido}</button>
         <button onclick="addCarinho()"><img src="./imgs/icons/Carrinho.png" alt="carrinho de produtos" class="btn-item-list"></button>
        </div>
     </div>`;
@@ -102,13 +105,12 @@ var listaCarrinho = document.querySelector('#list-add-carrinho');
 var cadaItem = document.querySelectorAll('.add-item-carrinho');
 var btnsAdd = document.querySelectorAll('.btn-item-list');
 
-
 let produtosList = [];
 
 function addCarinho() {
-
   let imgItem = event.target.closest('.add-item-carrinho').querySelector('.imgs-cards').src;
   let nomeItem = event.target.closest('.add-item-carrinho').querySelector('h3').textContent;
+  let valorItem = event.target.closest('.add-item-carrinho').querySelector('.valor-item').textContent;
 
   let itemExistente = Array.from(listaCarrinho.children).find(item => item.querySelector('h3').textContent === nomeItem);
 
@@ -121,8 +123,11 @@ function addCarinho() {
     let templateCarrinho = `
       <div class="cards-carrinho">
         <img src="${imgItem}" class="imgs-cards-carrinhos">
+        <div>
         <h3>${nomeItem}</h3>
-        <button class="menos-item"></button>
+        <h4 class="valor-item-carrinho">${valorItem}</h4>
+        </div>
+        <button onclick="calcularTotal()" class="menos-item"></button>
         <span class="cont-span">1</span>
         <button class="mais-item"></button>
       </div>`;
@@ -130,75 +135,93 @@ function addCarinho() {
 
     var qtdItem = document.querySelectorAll('.cont-span').textContent;
 
-    produtosList.push({img: imgItem, nome: nomeItem, quantidade: qtdItem});
-
+    produtosList.push({img: imgItem, nome: nomeItem, valor: valorItem, quantidade: qtdItem});
   }
+  calcularTotal();
 }
+
 
 
 function calcularTotal() {
   let total = 0;
   let itens = Array.from(listaCarrinho.children);
 
+  if(itens.length === 0) {
+    document.querySelector('#btn-carrinho').textContent = 'R$ 0,00';
+    return 0;
+  }
+
   itens.forEach(item => {
-    let valor = parseFloat(item.querySelector('.btns-cards button').textContent.replace('R$ ', ''));
+    let valor = parseFloat(item.querySelector('.valor-item-carrinho').textContent.replace('R$ ', ''));
     let quantidade = parseInt(item.querySelector('.cont-span').textContent);
     total += valor * quantidade;
   });
 
-  document.querySelector('#valor-list-carrinho').textContent = `R$ ${total.toFixed(2)}`;
+  document.querySelector('#btn-carrinho').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
   return total;
-}
 
+}
 
 
 
 // add ou remover itens no carrinho //
 listaCarrinho.addEventListener('click', (e) => {
-
   if(e.target.classList.contains('mais-item')) {
     let contSpan = e.target.previousElementSibling;
     let cont = parseInt(contSpan.textContent);
     cont++;
     contSpan.textContent = cont;
-    
+    let total = calcularTotal();
+    document.querySelector('#valor-list-carrinho').textContent = `R$ ${total.toFixed(2)}`;
   } else if(e.target.classList.contains('menos-item')) {
     let contSpan = e.target.nextElementSibling;
     let cont = parseInt(contSpan.textContent);
     cont--;
 
     if(cont <= 0) {
-        if(confirm('Deseja realmente excluir este item?')) {
-          contSpan.textContent = 0;
-          e.target.parentElement.remove();
-        
-        } else {
-          contSpan.textContent = 1;
-
-        }
+      if(confirm('Deseja realmente excluir este item?')) {
+        contSpan.textContent = 0;
+        calcularTotal();
+        e.target.parentElement.remove();
+      } else {
+        contSpan.textContent = 1;
+        calcularTotal();
+      }
     } else {
       contSpan.textContent = cont;
-
+      calcularTotal();
     }
 
   }
-  
 });
 
-
-// calcularTotal //
-let btnCalcular = document.getElementById('btn-carrinho');
-btnCalcular.addEventListener('chenge', () => {
-  let total = calcularTotal();
-  document.querySelector('#valor-list-carrinho').textContent = `R$ ${total.toFixed(2)}`;
-  return total;
-});
 
 
 // finalizar compra //
+
 let btnFinalizar = document.getElementById('btn-finalizar');
+let totalCompra = document.getElementById('btn-carrinho');
+
 btnFinalizar.addEventListener('click', () => {
-  window.location.href = './cliente/carrinho-cliente.html';
+  let total = totalCompra.textContent;
+  let totalCompraNum = parseFloat(total.replace('R$ ', ''));
+
+  if (totalCompraNum === 0) {
+    alert('Adicione itens ao carrinho para finalizar a compra');
+  } else {
+    let itensCarrinho = Array.from(listaCarrinho.children).map(item => {
+      return {
+        img: item.querySelector('.imgs-cards-carrinhos').src,
+        nome: item.querySelector('h3').textContent,
+        valorItem: item.querySelector('.valor-item-carrinho').textContent,
+        quantidade: item.querySelector('.cont-span').textContent,
+        valorTotal: item.querySelector('.valor-item-carrinho').textContent
+      };
+    });
+
+    localStorage.setItem('itensCarrinho', JSON.stringify(itensCarrinho));
+    alert('Compra realizada com sucesso!');
+    listaCarrinho.innerHTML = '';
+    document.querySelector('#btn-carrinho').textContent = 'R$ 0,00';
+  }
 });
-
-
